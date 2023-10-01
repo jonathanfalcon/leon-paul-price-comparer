@@ -1,0 +1,331 @@
+{
+  "#product_addtocart_form": {
+    "priceBundle": {
+      "optionConfig": {
+        "options": {
+          "16": {
+            "selections": {
+              "1648": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "4840",
+                "prices": { "oldPrice": { "amount": 46.896001 }, "basePrice": { "amount": 39.08 }, "finalPrice": { "amount": 46.896001 } },
+                "weight": {
+                  "3988": "1000.000000",
+                  "3989": "1000.000000",
+                  "3990": "1000.000000",
+                  "3991": "1000.000000",
+                  "3984": "1000.000000",
+                  "3985": "1000.000000",
+                  "3986": "1000.000000",
+                  "3987": "1000.000000"
+                },
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "LP - Carbon Foil Blade",
+                "canApplyMsrp": false
+              },
+              "1774": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "12493",
+                "prices": { "oldPrice": { "amount": 129.504001 }, "basePrice": { "amount": 107.92 }, "finalPrice": { "amount": 129.504001 } },
+                "weight": { "12495": "163", "12497": "163", "12494": "163", "12496": "163" },
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "LP - Apex FIE Foil Blade",
+                "canApplyMsrp": false
+              },
+              "1652": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "10219",
+                "prices": { "oldPrice": { "amount": 158.100001 }, "basePrice": { "amount": 131.75 }, "finalPrice": { "amount": 158.100001 } },
+                "weight": { "6380": "1000.000000", "6381": "1000.000000" },
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "BF - Silver FIE Foil Blade",
+                "canApplyMsrp": false
+              },
+              "1651": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "10218",
+                "prices": { "oldPrice": { "amount": 163.500001 }, "basePrice": { "amount": 136.25 }, "finalPrice": { "amount": 163.500001 } },
+                "weight": { "6389": "150.000000", "6388": "150.000000" },
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "BF - Blue FIE Foil Blade",
+                "canApplyMsrp": false
+              }
+            },
+            "title": "Blade",
+            "isMulti": false,
+            "position": 0
+          },
+          "22": {
+            "selections": {
+              "110": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "4285",
+                "prices": { "oldPrice": { "amount": 22.896001 }, "basePrice": { "amount": 19.08 }, "finalPrice": { "amount": 22.896001 } },
+                "weight": 37,
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "Lightweight Electric Foil Guard ",
+                "canApplyMsrp": false
+              },
+              "111": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "4286",
+                "prices": { "oldPrice": { "amount": 7.896001 }, "basePrice": { "amount": 6.58 }, "finalPrice": { "amount": 7.896001 } },
+                "weight": 44,
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "Junior Electric Foil Guard",
+                "canApplyMsrp": false
+              },
+              "112": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "4287",
+                "prices": { "oldPrice": { "amount": 21.396001 }, "basePrice": { "amount": 17.83 }, "finalPrice": { "amount": 21.396001 } },
+                "weight": 41,
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "Leon Paul Titan Foil Guard",
+                "canApplyMsrp": false
+              },
+              "109": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "4284",
+                "prices": { "oldPrice": { "amount": 7.896001 }, "basePrice": { "amount": 6.58 }, "finalPrice": { "amount": 7.896001 } },
+                "weight": 52,
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "Standard Electric Foil Guard ",
+                "canApplyMsrp": false
+              }
+            },
+            "title": "Guard",
+            "isMulti": false,
+            "position": 1
+          },
+          "23": {
+            "selections": {
+              "113": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "4317",
+                "prices": { "oldPrice": { "amount": 1.596001 }, "basePrice": { "amount": 1.33 }, "finalPrice": { "amount": 1.596001 } },
+                "weight": 10,
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "Electric Foil & Sabre Pad",
+                "canApplyMsrp": false
+              },
+              "115": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "4319",
+                "prices": { "oldPrice": { "amount": 3.996001 }, "basePrice": { "amount": 3.33 }, "finalPrice": { "amount": 3.996001 } },
+                "weight": 8,
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "Pro-Range Electric Foil Pad",
+                "canApplyMsrp": false
+              }
+            },
+            "title": "Pad",
+            "isMulti": false,
+            "position": 2
+          },
+          "24": {
+            "selections": {
+              "119": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "4330",
+                "prices": { "oldPrice": { "amount": 9.000001 }, "basePrice": { "amount": 7.5 }, "finalPrice": { "amount": 9.000001 } },
+                "weight": 20,
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "2-Pin Foil Socket",
+                "canApplyMsrp": false
+              }
+            },
+            "title": "Socket",
+            "isMulti": false,
+            "position": 3
+          },
+          "556": {
+            "selections": {
+              "1655": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "9966",
+                "prices": { "oldPrice": { "amount": 32.700001 }, "basePrice": { "amount": 27.25 }, "finalPrice": { "amount": 32.700001 } },
+                "weight": { "9965": "63.000000", "4225": "63.000000", "9964": "63.000000", "4226": "63.000000" },
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "Mag-Tec Ultralight Pistol Grip",
+                "canApplyMsrp": false
+              },
+              "1657": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "4879",
+                "prices": { "oldPrice": { "amount": 36.000001 }, "basePrice": { "amount": 30 }, "finalPrice": { "amount": 36.000001 } },
+                "weight": { "4203": "63.000000", "4204": "63.000000" },
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "Mag-Tec Ultralight Belgian Grip",
+                "canApplyMsrp": false
+              },
+              "1656": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "10151",
+                "prices": { "oldPrice": { "amount": 48.000001 }, "basePrice": { "amount": 40 }, "finalPrice": { "amount": 48.000001 } },
+                "weight": { "10152": "35.000000", "10155": "35.000000", "10153": "35.000000", "10154": "35.000000" },
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "Mag-Tec Zer0 Pistol Grip",
+                "canApplyMsrp": false
+              },
+              "1654": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "4889",
+                "prices": { "oldPrice": { "amount": 21.000001 }, "basePrice": { "amount": 17.5 }, "finalPrice": { "amount": 21.000001 } },
+                "weight": {
+                  "4241": "117.000000",
+                  "4242": "117.000000",
+                  "4239": "91.000000",
+                  "4240": "91.000000",
+                  "4237": "81.000000",
+                  "4238": "81.000000",
+                  "4243": "133.000000",
+                  "4244": "133.000000",
+                  "4235": "75.000000",
+                  "4236": "75.000000"
+                },
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "Gryptonite Foil Pistol Grip",
+                "canApplyMsrp": false
+              },
+              "1653": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "4884",
+                "prices": { "oldPrice": { "amount": 25.296001 }, "basePrice": { "amount": 21.08 }, "finalPrice": { "amount": 25.296001 } },
+                "weight": { "4219": "90.000000", "4220": "90.000000" },
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "MH Foil Pistol Grip",
+                "canApplyMsrp": false
+              },
+              "1658": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "4876",
+                "prices": { "oldPrice": { "amount": 21.000001 }, "basePrice": { "amount": 17.5 }, "finalPrice": { "amount": 21.000001 } },
+                "weight": { "4194": "98.000000", "4195": "98.000000" },
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "Gryptonite Foil Belgian Pistol Grip",
+                "canApplyMsrp": false
+              },
+              "1782": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "12526",
+                "prices": { "oldPrice": { "amount": 48.000001 }, "basePrice": { "amount": 40 }, "finalPrice": { "amount": 48.000001 } },
+                "weight": { "12528": "46.000000", "12527": "46.000000" },
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "Mag-Tec Zer0 Belgian Grip",
+                "canApplyMsrp": false
+              },
+              "1660": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "4871",
+                "prices": { "oldPrice": { "amount": 7.896001 }, "basePrice": { "amount": 6.58 }, "finalPrice": { "amount": 7.896001 } },
+                "weight": { "4178": "25.000000", "4179": "25.000000" },
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "Standard Tacktonite Rubber Foil Handle ",
+                "canApplyMsrp": false
+              },
+              "1661": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "4872",
+                "prices": { "oldPrice": { "amount": 10.296001 }, "basePrice": { "amount": 8.58 }, "finalPrice": { "amount": 10.296001 } },
+                "weight": { "4181": "26.000000", "4182": "26.000000" },
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "Leather Foil Handle ",
+                "canApplyMsrp": false
+              }
+            },
+            "title": "Grip",
+            "isMulti": false,
+            "position": 4
+          },
+          "14": {
+            "selections": {
+              "69": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "4265",
+                "prices": { "oldPrice": { "amount": 3.996001 }, "basePrice": { "amount": 3.33 }, "finalPrice": { "amount": 3.996001 } },
+                "weight": 14,
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "Nut For Metal Pistol And Belgian Grips Only",
+                "canApplyMsrp": false
+              },
+              "108": {
+                "qty": 1,
+                "customQty": "0",
+                "optionId": "4269",
+                "prices": { "oldPrice": { "amount": 6.600001 }, "basePrice": { "amount": 5.5 }, "finalPrice": { "amount": 6.600001 } },
+                "weight": 111,
+                "priceType": "0",
+                "tierPrice": [],
+                "name": "Insulated Foil Pommel",
+                "canApplyMsrp": false
+              }
+            },
+            "title": "Pommel",
+            "isMulti": false,
+            "position": 5
+          }
+        },
+        "selected": { "24": ["119"] },
+        "positions": ["16", "22", "23", "24", "556", "14"],
+        "bundleId": "4664",
+        "priceFormat": {
+          "pattern": "\u00a3%s",
+          "precision": 2,
+          "requiredPrecision": 2,
+          "decimalSymbol": ".",
+          "groupSymbol": ",",
+          "groupLength": 3,
+          "integerRequired": false
+        },
+        "prices": { "oldPrice": { "amount": 0 }, "basePrice": { "amount": 0 }, "finalPrice": { "amount": 0 } },
+        "weight": 0,
+        "priceType": "0",
+        "isFixedPrice": false
+      },
+      "controlContainer": ".field.option"
+    }
+  }
+}

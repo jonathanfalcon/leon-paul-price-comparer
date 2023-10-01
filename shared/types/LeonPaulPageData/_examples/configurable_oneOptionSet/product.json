@@ -1,0 +1,15 @@
+{
+  "event": "productPage",
+  "product": {
+    "id": "12480",
+    "sku": "525WS",
+    "parent_sku": "525WS",
+    "product_type": "configurable",
+    "name": "The Apex Bag",
+    "price": 272.5,
+    "attribute_set_id": "4",
+    "path": "The Apex Bag",
+    "category": "Bags",
+    "image_url": "https://www.leonpaul.com/media/catalog/product/5/2/525ws_apex_bag-19-full_copy.jpg"
+  }
+}

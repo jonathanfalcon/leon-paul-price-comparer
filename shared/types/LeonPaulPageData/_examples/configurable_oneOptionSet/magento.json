@@ -1,0 +1,80 @@
+{
+  "#product_addtocart_form": {
+    "configurable": {
+      "spConfig": {
+        "attributes": {
+          "554": {
+            "id": "554",
+            "code": "apex_bag_options",
+            "label": "Apex Bag Options",
+            "options": [
+              { "id": "805", "label": "Apex Bag", "products": ["12481"] },
+              { "id": "806", "label": "+ Top Bag", "products": ["12482"] },
+              { "id": "807", "label": "+ Top Bag Pro", "products": ["12483"] }
+            ],
+            "position": "0"
+          }
+        },
+        "template": "\u00a3<%- data.price %>",
+        "currencyFormat": "\u00a3%s",
+        "optionPrices": {
+          "12481": {
+            "baseOldPrice": { "amount": 272.5 },
+            "oldPrice": { "amount": 327.000001 },
+            "basePrice": { "amount": 272.5 },
+            "finalPrice": { "amount": 327.000001 },
+            "tierPrices": [],
+            "msrpPrice": { "amount": 0 }
+          },
+          "12482": {
+            "baseOldPrice": { "amount": 309.75 },
+            "oldPrice": { "amount": 371.700001 },
+            "basePrice": { "amount": 309.75 },
+            "finalPrice": { "amount": 371.700001 },
+            "tierPrices": [],
+            "msrpPrice": { "amount": 0 }
+          },
+          "12483": {
+            "baseOldPrice": { "amount": 377 },
+            "oldPrice": { "amount": 452.400001 },
+            "basePrice": { "amount": 377 },
+            "finalPrice": { "amount": 452.400001 },
+            "tierPrices": [],
+            "msrpPrice": { "amount": 0 }
+          }
+        },
+        "priceFormat": {
+          "pattern": "\u00a3%s",
+          "precision": 2,
+          "requiredPrecision": 2,
+          "decimalSymbol": ".",
+          "groupSymbol": ",",
+          "groupLength": 3,
+          "integerRequired": false
+        },
+        "prices": {
+          "baseOldPrice": { "amount": 272.5 },
+          "oldPrice": { "amount": 327.000001 },
+          "basePrice": { "amount": 272.5 },
+          "finalPrice": { "amount": 327.000001 }
+        },
+        "productId": "12480",
+        "chooseText": "Choose an Option...",
+        "images": [],
+        "index": { "12481": { "554": "805" }, "12482": { "554": "806" }, "12483": { "554": "807" } },
+        "salable": { "554": { "805": ["12481"], "806": ["12482"], "807": ["12483"] } },
+        "canDisplayShowOutOfStockStatus": true,
+        "channel": "website",
+        "salesChannelCode": "base",
+        "sku": { "12481": "525WS1", "12482": "525WSK1", "12483": "525WSK2" },
+        "skus": { "12481": "525WS1", "12482": "525WSK1", "12483": "525WSK2" },
+        "stockQty": { "12481": 0, "12482": -25, "12483": -49 },
+        "stockStatus": { "12481": 2, "12482": 2, "12483": 2 }
+      },
+      "gallerySwitchStrategy": "prepend"
+    }
+  },
+  "*": {
+    "Magento_ConfigurableProduct/js/catalog-add-to-cart": {}
+  }
+}

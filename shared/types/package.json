@@ -1,0 +1,8 @@
+{
+  "name": "@leon-paul-price-comparer/types",
+  "version": "1.0.0",
+  "description": "Collection of types used in leon-paul-price-comparer",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
+}

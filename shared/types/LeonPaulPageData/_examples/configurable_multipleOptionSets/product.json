@@ -1,0 +1,15 @@
+{
+  "event": "productPage",
+  "product": {
+    "id": "5810",
+    "sku": "F280CXC",
+    "parent_sku": "F280CXC",
+    "product_type": "configurable",
+    "name": "Colored X-Change FIE Contour Foil Mask",
+    "price": 250.33,
+    "attribute_set_id": "4",
+    "path": "Colored X-Change FIE Contour Foil Mask",
+    "category": "Masks",
+    "image_url": "https://www.leonpaul.com/media/catalog/product/f/2/f280cxc_4.jpg"
+  }
+}
