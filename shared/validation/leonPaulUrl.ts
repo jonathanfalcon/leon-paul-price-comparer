@@ -6,7 +6,7 @@ import URI from 'urijs'
  * @property subdomain - The URL subdomain (e.g., `app` for `app.example.com`).
  * @property domain - The URL domain (e.g., `example.com`).
  * @property path - The URL path (e.g., `/path/to/resource`).
- * @property extension - The URL extension (e.g., `.html` or `.png`).
+ * @property extension - The URL extension (e.g., `html` or `png`).
  * @property query - The URL query string (e.g., `?id=123&search=keyword`).
  * @property anchor - The URL anchor (e.g., fragment identifier, `#section`).
  */
