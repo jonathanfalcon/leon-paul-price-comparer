@@ -101,6 +101,11 @@ const clean = (url: string): string => {
  * @param url A Leon Paul URL in string format.
  * @returns Returns the ISO country code the URL belongs to.
  * @throws {Error} Throws an error if the given URL is not a valid Leon Paul URL.
+ * @example
+ * console.log(region('https://www.leonpaul.com/mens-apex-fie-jacket.html'))
+ *
+ * // This will be logged the console:
+ * 'GBR'
  */
 const region = (url: string): CountryCode => {
     const { domain } = extractUrlComponents(url) as { domain: CountryDomain }
