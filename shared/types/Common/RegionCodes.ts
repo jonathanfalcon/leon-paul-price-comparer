@@ -10,14 +10,14 @@
  * - `leonpaulukraine.com` - Ukraine
  * - `leonpaulusa.com` - United States
  */
-export type CountryUrl = 'https://leonpaulaustralia.com'
-    | 'https://leonpaulcanada.com'
-    | 'https://leonpaulgermany.com'
-    | 'https://leonpaulfrance.com'
-    | 'https/leonpaulitaly.com'
-    | 'https://leonpaul.com'
-    | 'https://leonpaulukraine.com'
-    | 'https://leonpaulusa.com'
+export type CountryDomain = 'leonpaulaustralia.com'
+    | 'leonpaulcanada.com'
+    | 'leonpaulgermany.com'
+    | 'leonpaulfrance.com'
+    | 'leonpaulitaly.com'
+    | 'leonpaul.com'
+    | 'leonpaulukraine.com'
+    | 'leonpaulusa.com'
 
 
 /**
