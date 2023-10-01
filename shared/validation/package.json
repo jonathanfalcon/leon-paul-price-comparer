@@ -1,0 +1,14 @@
+{
+  "name": "@leon-paul-price-comparer/validation",
+  "version": "1.0.0",
+  "description": "Collection of data cleaning, validation, and transformation tools for use in leon-paul-price-comparer",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "urijs": "^1.19.11"
+  },
+  "devDependencies": {
+    "@types/urijs": "^1.19.20"
+  }
+}
