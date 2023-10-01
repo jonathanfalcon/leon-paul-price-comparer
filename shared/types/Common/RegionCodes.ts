@@ -1,4 +1,26 @@
 /**
+ * Represents all the possible Leon Paul regional sites.
+ *
+ * - `leonpaulaustralia.com` - Australia
+ * - `leonpaulcanada.com` - Canada
+ * - `leonpaulgermany.com` - Germany
+ * - `leonpaulfrance.com` - France
+ * - `leonpaulitaly.com` - Italy
+ * - `leonpaul.com` - United Kingdom
+ * - `leonpaulukraine.com` - Ukraine
+ * - `leonpaulusa.com` - United States
+ */
+export type CountryUrl = 'https://leonpaulaustralia.com'
+    | 'https://leonpaulcanada.com'
+    | 'https://leonpaulgermany.com'
+    | 'https://leonpaulfrance.com'
+    | 'https/leonpaulitaly.com'
+    | 'https://leonpaul.com'
+    | 'https://leonpaulukraine.com'
+    | 'https://leonpaulusa.com'
+
+
+/**
  * Represents all the possible Leon Paul regional sites and their corresponding ISO country codes.
  *
  * - `AUS` (Australia) - leonpaulaustralia.com
