@@ -71,3 +71,45 @@ const extractUrlComponents = (urlString: string): UrlComponents => {
         }
     }
 }
+
+
+/**
+ * Validates that a given URL is a Leon Paul URL.
+ * @param url A URL in string format.
+ * @returns Returns `true` if the url domain matched a Leon Paul domain; `false` if otherwise.
+ */
+const validate = (url: string): boolean => {
+    const regex = new RegExp(`^(leonpaul(?:usa)?\\.com)$`)
+    const { domain } = extractUrlComponents(url)
+    return regex.test(domain)
+}
+
+/**
+ * Cleans and formats a Leon Paul URL, preserving only the domain and path.
+ * @param url A URL in string format.
+ * @returns Returns either the cleaned and formatted URL or an empty string (a falsy value).
+ */
+const clean = (url: string): string => {
+    const { domain, path } = extractUrlComponents(url)
+    return url ? `https://www.${domain}${path}` : ''
+}
+
+
+/**
+ * Identifies which regional site a Leon Paul URL belongs to.
+ * @param url A URL in string format.
+ * @returns Returns which country the URL belongs to (e.g., `UK` or `USA`)
+ * @throws {Error} Throws an error if the given URL is not a valid Leon Paul URL.
+ */
+const region = (url: string): 'UK' | 'USA' => {
+    const { domain } = extractUrlComponents(url)
+
+    switch (domain) {
+        case 'leonpaul.com':
+            return 'UK'
+        case 'leonpaulusa.com':
+            return 'USA'
+        default:
+            throw new Error('Given URL is not a valid Leon Paul URL.')
+    }
+}
