@@ -16,3 +16,6 @@ export * from './LeonPaulPageData/Product/Product'
 
 // Web Scraping Types - Common
 export * from './LeonPaulPageData/Common/Prices'
+
+// Common Types (used in multiple workspaces or lack a distinct grouping)
+export * from './Common/IsoCodes'
