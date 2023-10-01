@@ -113,3 +113,21 @@ const region = (url: string): 'UK' | 'USA' => {
             throw new Error('Given URL is not a valid Leon Paul URL.')
     }
 }
+
+
+/**
+ * An object containing functions for working with Leon Paul URLs.
+ * @property clean - Cleans and formats a Leon Paul URL, preserving only the domain and path.
+ * @property validate - Validates that a given URL is a Leon Paul URL.
+ * @property region - Identifies which regional site a Leon Paul URL belongs to.
+ * @see clean
+ * @see validate
+ * @see country
+ */
+const leonPaulUrl = {
+    clean,
+    validate,
+    region,
+}
+
+export default leonPaulUrl
