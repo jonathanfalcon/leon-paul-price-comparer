@@ -18,4 +18,4 @@ export * from './LeonPaulPageData/Product/Product'
 export * from './LeonPaulPageData/Common/Prices'
 
 // Common Types (used in multiple workspaces or lack a distinct grouping)
-export * from './Common/IsoCodes'
+export * from './Common/RegionCodes'
