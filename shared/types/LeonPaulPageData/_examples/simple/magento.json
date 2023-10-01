@@ -1,0 +1,144 @@
+{
+  "*": {
+    "Magento_Catalog/js/product/view/provider": {
+      "data": {
+        "items": {
+          "10149": {
+            "add_to_cart_button": {
+              "post_data": "{\"action\":\"https:\\/\\/www.leonpaul.com\\/checkout\\/cart\\/add\\/uenc\\/%25uenc%25\\/product\\/10149\\/\",\"data\":{\"product\":\"10149\",\"uenc\":\"%uenc%\"}}",
+              "url": "https://www.leonpaul.com/checkout/cart/add/uenc/%25uenc%25/product/10149/",
+              "required_options": false
+            },
+            "add_to_compare_button": {
+              "post_data": null,
+              "url": "{\"action\":\"https:\\/\\/www.leonpaul.com\\/catalog\\/product_compare\\/add\\/\",\"data\":{\"product\":\"10149\",\"uenc\":\"aHR0cHM6Ly93d3cubGVvbnBhdWwuY29tL2xwLXRpcC1zY3Jld3MtMTAxNDkuaHRtbA,,\"}}",
+              "required_options": null
+            },
+            "price_info": {
+              "final_price": 18.996001,
+              "max_price": 18.996001,
+              "max_regular_price": 18.996001,
+              "minimal_regular_price": 18.996001,
+              "special_price": null,
+              "minimal_price": 18.996001,
+              "regular_price": 18.996001,
+              "formatted_prices": {
+                "final_price": "<span class=\"price\">\u00a319.00</span>",
+                "max_price": "<span class=\"price\">\u00a319.00</span>",
+                "minimal_price": "<span class=\"price\">\u00a319.00</span>",
+                "max_regular_price": "<span class=\"price\">\u00a319.00</span>",
+                "minimal_regular_price": null,
+                "special_price": null,
+                "regular_price": "<span class=\"price\">\u00a319.00</span>"
+              },
+              "extension_attributes": {
+                "msrp": {
+                  "msrp_price": "<span class=\"price\">\u00a30.00</span>",
+                  "is_applicable": "",
+                  "is_shown_price_on_gesture": "",
+                  "msrp_message": "",
+                  "explanation_message": "Our price is lower than the manufacturer&#039;s &quot;minimum advertised price.&quot;  As a result, we cannot show you the price in catalog or the product page. <br><br> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart."
+                },
+                "tax_adjustments": {
+                  "final_price": 15.83,
+                  "max_price": 15.83,
+                  "max_regular_price": 15.83,
+                  "minimal_regular_price": 15.83,
+                  "special_price": 15.83,
+                  "minimal_price": 15.83,
+                  "regular_price": 15.83,
+                  "formatted_prices": {
+                    "final_price": "<span class=\"price\">\u00a315.83</span>",
+                    "max_price": "<span class=\"price\">\u00a315.83</span>",
+                    "minimal_price": "<span class=\"price\">\u00a315.83</span>",
+                    "max_regular_price": "<span class=\"price\">\u00a315.83</span>",
+                    "minimal_regular_price": null,
+                    "special_price": "<span class=\"price\">\u00a315.83</span>",
+                    "regular_price": "<span class=\"price\">\u00a315.83</span>"
+                  }
+                },
+                "weee_attributes": [],
+                "weee_adjustment": "<span class=\"price\">\u00a319.00</span>"
+              }
+            },
+            "images": [
+              {
+                "url": "https://www.leonpaul.com/media/catalog/product/cache/35aaf620e79d8e10aa4c5b58e3adfa28/e/2/e20-2.jpg",
+                "code": "recently_viewed_products_grid_content_widget",
+                "height": 300,
+                "width": 240,
+                "label": "LP Tip Screws - Bag of 50",
+                "resized_width": 240,
+                "resized_height": 300
+              },
+              {
+                "url": "https://www.leonpaul.com/media/catalog/product/cache/9e187c87ba4f13793a3fb365cc9e0841/e/2/e20-2.jpg",
+                "code": "recently_viewed_products_list_content_widget",
+                "height": 276,
+                "width": 225,
+                "label": "LP Tip Screws - Bag of 50",
+                "resized_width": 225,
+                "resized_height": 276
+              },
+              {
+                "url": "https://www.leonpaul.com/media/catalog/product/cache/2c1e340199ddeedb2b4ec719841a3dcf/e/2/e20-2.jpg",
+                "code": "recently_viewed_products_images_names_widget",
+                "height": 90,
+                "width": 75,
+                "label": "LP Tip Screws - Bag of 50",
+                "resized_width": 75,
+                "resized_height": 90
+              },
+              {
+                "url": "https://www.leonpaul.com/media/catalog/product/cache/9e187c87ba4f13793a3fb365cc9e0841/e/2/e20-2.jpg",
+                "code": "recently_compared_products_grid_content_widget",
+                "height": 276,
+                "width": 225,
+                "label": "LP Tip Screws - Bag of 50",
+                "resized_width": 225,
+                "resized_height": 276
+              },
+              {
+                "url": "https://www.leonpaul.com/media/catalog/product/cache/9e187c87ba4f13793a3fb365cc9e0841/e/2/e20-2.jpg",
+                "code": "recently_compared_products_list_content_widget",
+                "height": 276,
+                "width": 225,
+                "label": "LP Tip Screws - Bag of 50",
+                "resized_width": 225,
+                "resized_height": 276
+              },
+              {
+                "url": "https://www.leonpaul.com/media/catalog/product/cache/9e187c87ba4f13793a3fb365cc9e0841/e/2/e20-2.jpg",
+                "code": "recently_compared_products_images_names_widget",
+                "height": 276,
+                "width": 225,
+                "label": "LP Tip Screws - Bag of 50",
+                "resized_width": 225,
+                "resized_height": 276
+              }
+            ],
+            "url": "https://www.leonpaul.com/lp-tip-screws-10149.html",
+            "id": 10149,
+            "name": "LP Tip Screws - Bag of 50",
+            "type": "simple",
+            "is_salable": "1",
+            "store_id": 1,
+            "currency_code": "GBP",
+            "extension_attributes": {
+              "review_html": "    <div class=\"product-reviews-summary short empty\">\n        <div class=\"reviews-actions\">\n            <a class=\"action add\" href=\"https://www.leonpaul.com/lp-tip-screws-10149.html#review-form\">\n                Be the first to review this product            </a>\n        </div>\n    </div>\n",
+              "wishlist_button": {
+                "post_data": null,
+                "url": "{\"action\":\"https:\\/\\/www.leonpaul.com\\/wishlist\\/index\\/add\\/\",\"data\":{\"product\":10149,\"uenc\":\"aHR0cHM6Ly93d3cubGVvbnBhdWwuY29tL2xwLXRpcC1zY3Jld3MtMTAxNDkuaHRtbA,,\"}}",
+                "required_options": null
+              }
+            },
+            "is_available": true
+          }
+        },
+        "store": "1",
+        "currency": "GBP",
+        "productCurrentScope": "website"
+      }
+    }
+  }
+}

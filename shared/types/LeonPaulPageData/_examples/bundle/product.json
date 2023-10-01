@@ -1,0 +1,15 @@
+{
+  "event": "productPage",
+  "product": {
+    "id": "4664",
+    "sku": "ELECFOIL",
+    "parent_sku": "ELECFOIL",
+    "product_type": "bundle",
+    "name": "Custom Foil Creator",
+    "price": 64.4,
+    "attribute_set_id": "4",
+    "path": "Custom Foil Creator",
+    "category": "Weapons",
+    "image_url": "https://www.leonpaul.com/media/catalog/product/f/1/f11b.jpg"
+  }
+}

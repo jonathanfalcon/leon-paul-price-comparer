@@ -1,0 +1,15 @@
+{
+  "event": "productPage",
+  "product": {
+    "id": "10149",
+    "sku": "E2050",
+    "parent_sku": "E2050",
+    "product_type": "simple",
+    "name": "LP Tip Screws - Bag of 50",
+    "price": 15.83,
+    "attribute_set_id": "4",
+    "path": "Weapons > Parts > LP Tip Screws - Bag of 50",
+    "category": "Parts",
+    "image_url": "https://www.leonpaul.com/media/catalog/product/e/2/e20-2.jpg"
+  }
+}
