@@ -98,8 +98,8 @@ const clean = (url: string): string => {
 
 /**
  * Identifies which regional site a Leon Paul URL belongs to.
- * @param url A URL in string format.
- * @returns Returns which country the URL belongs to (e.g., `UK` or `USA`)
+ * @param url A Leon Paul URL in string format.
+ * @returns Returns the ISO country code the URL belongs to.
  * @throws {Error} Throws an error if the given URL is not a valid Leon Paul URL.
  */
 const region = (url: string): CountryCode => {
