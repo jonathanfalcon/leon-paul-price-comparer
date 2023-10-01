@@ -1,4 +1,5 @@
 import URI from 'urijs'
+import { CountryCode, CountryDomain } from '@leon-paul-price-comparer/types'
 
 /**
  * Represents the components of a URL.
@@ -101,12 +102,24 @@ const clean = (url: string): string => {
  * @returns Returns which country the URL belongs to (e.g., `UK` or `USA`)
  * @throws {Error} Throws an error if the given URL is not a valid Leon Paul URL.
  */
-const region = (url: string): 'UK' | 'USA' => {
-    const { domain } = extractUrlComponents(url)
+const region = (url: string): CountryCode => {
+    const { domain } = extractUrlComponents(url) as { domain: CountryDomain }
 
     switch (domain) {
+        case 'leonpaulaustralia.com':
+            return 'AUS'
+        case 'leonpaulcanada.com':
+            return 'CAN'
+        case 'leonpaulgermany.com':
+            return 'DEU'
+        case 'leonpaulfrance.com':
+            return 'FRA'
+        case 'leonpaulitaly.com':
+            return 'ITA'
         case 'leonpaul.com':
-            return 'UK'
+            return 'GBR'
+        case 'leonpaulukraine.com':
+            return 'UKR'
         case 'leonpaulusa.com':
             return 'USA'
         default:
