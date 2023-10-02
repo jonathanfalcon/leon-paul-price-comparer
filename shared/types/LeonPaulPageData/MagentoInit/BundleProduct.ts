@@ -18,7 +18,7 @@ export type Selection = {
  * Represents an option category inside a product bundle, .e.g, grip, blade, or guard for the "Custom Foil Creator" product.
  *
  * @property title - The name of a given option category.
- * @property selections - A collection of the possible selection for a given option category.
+ * @property selections - A collection of the possible selections for a given option category.
  *
  * @see Selection
  */

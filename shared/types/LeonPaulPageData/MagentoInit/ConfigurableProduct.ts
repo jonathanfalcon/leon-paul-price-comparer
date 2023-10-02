@@ -4,6 +4,7 @@ import { Prices } from '../Common/Prices'
  * Represents an attribute item for a product, e.g., padding type, size, and bib type for a foil mask.
  * @property id - The unique identifier for a given product attribute.
  * @property label - The label for a given product attribute.
+ * @property options - An array of options for a given product attribute.
  */
 export type AttributesItem = {
     id: string,
