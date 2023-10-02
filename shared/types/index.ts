@@ -2,6 +2,12 @@
  * Exports all the types used in the Leon Paul Price Comparer project.
  */
 
+// App Types
+export * from './AppData/ExchangeRate/ExchangeRate'
+export * from './AppData/LeonPaulCart/LeonPaulCart'
+export * from './AppData/LeonPaulCart/LeonPaulProduct'
+export * from './AppData/UserPreferences/UserPreferences'
+
 // Web Scraping Types
 export * from './LeonPaulPageData/LeonPaulPageData'
 
