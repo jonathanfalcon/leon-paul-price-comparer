@@ -6,13 +6,12 @@ import { Prices } from '../Common/Prices'
  * @property optionId - The unique identifier for a given selection.
  * @property name - The name for a given selection.
  * @property prices - A collection of price properties for a given selection.
-*/
+ */
 export type Selection = {
-    optionId: string,
-    name: string,
-    prices: Prices,
+    optionId: string
+    name: string
+    prices: Prices
 }
-
 
 /**
  * Represents an option category inside a product bundle, .e.g, grip, blade, or guard for the "Custom Foil Creator" product.
@@ -23,10 +22,9 @@ export type Selection = {
  * @see Selection
  */
 export type Option = {
-    title: string,
+    title: string
     selections: Record<string, Selection>
 }
-
 
 /**
  * Represents the properties of a bundle product's JSON.
@@ -36,9 +34,8 @@ export type Option = {
  * @see Option
  */
 export type BundleConfig = {
-    options: Record<string, Option>,
+    options: Record<string, Option>
 }
-
 
 /**
  * Represents the structure of magento-init for a product where `"product_type": "bundle"`.
@@ -48,7 +45,7 @@ export type BundleConfig = {
 export type BundleProduct = {
     '#product_addtocart_form': {
         priceBundle: {
-            optionConfig: BundleConfig,
-        },
-    },
+            optionConfig: BundleConfig
+        }
+    }
 }
