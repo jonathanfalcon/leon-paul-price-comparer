@@ -99,7 +99,7 @@ export type CartItemProduct = {
  * @property url - The URL to that product.
  * @property price - The total price (before and after tax) of a given product.
  */
-export type LeonPaulBaseProduct = {
+export type LeonPaulSimpleProduct = {
     itemName: string,
     url: string,
     price: Price,
@@ -109,25 +109,13 @@ export type LeonPaulBaseProduct = {
 /**
  * Represents an extension of the base product, where `productType: 'simple'`.
  *
- * @property productType - The product type of a given product. In this case, simple, because it lacks options or attributes to choose from.
- */
-export type LeonPaulSimpleProduct = LeonPaulBaseProduct & {
-    productType: 'simple',
-}
-
-
-/**
- * Represents an extension of the base product, where `productType: 'configurable'`.
- *
- * @property productType - The product type of a given product. In this case, configurable, because it has a set of attributes whose price is found inside products.
  * @property attributes - An array of attributes for a given product, e.g., padding type, size, and bib type for a foil mask.
  * @property products - An array of product configurations with their associated attributes and selected options and their prices.
  *
  * @see CartItemAttribute
  * @see CartItemProduct
  */
-export type LeonPaulConfigurableProduct = LeonPaulBaseProduct & {
-    productType: 'configurable',
+export type LeonPaulConfigurableProduct = LeonPaulSimpleProduct & {
     attributes: CartItemAttribute[],
     products: CartItemProduct[],
 }
@@ -141,8 +129,7 @@ export type LeonPaulConfigurableProduct = LeonPaulBaseProduct & {
  *
  * @see CartItemOption
  */
-export type LeonPaulBundleProduct = LeonPaulBaseProduct & {
-    productType: 'bundle',
+export type LeonPaulBundleProduct = LeonPaulSimpleProduct & {
     options: CartItemOption[],
 }
 
