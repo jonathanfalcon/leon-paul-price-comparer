@@ -27,3 +27,15 @@ enum CountryCode {
   UKR
   USA
 }
+// Start `model`
+
+// This is where common product data is stored. The Product table closely resembles type LeonPaulCartItemBase in `types/AppData/LeonPaulCart/LeonPaulCart.ts`
+model Product {
+  sku         String      @id @unique
+  imageUrl    String
+  lastFetch   Int
+  productType ProductType
+
+  // Define one-to-many relationship with RegionalProductData table
+  RegionalProductData RegionalProductData[]
+}
