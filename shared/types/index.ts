@@ -25,3 +25,4 @@ export * from './LeonPaulPageData/Common/Prices'
 
 // Common Types (used in multiple workspaces or lack a distinct grouping)
 export * from './Common/RegionCodes'
+export * from './Common/ProductType'
