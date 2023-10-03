@@ -93,7 +93,7 @@ export type CartItemProduct = {
 
 
 /**
- * Represents the most basic, common structure of a Leon Paul Product.
+ * Represents the most basic, common structure of a Leon Paul Product. Both configurable and bundle product type are extensions of this.
  *
  * @property itemName - The name of a given product.
  * @property url - The URL to that product.
@@ -107,7 +107,7 @@ export type LeonPaulSimpleProduct = {
 
 
 /**
- * Represents an extension of the base product, where `productType: 'simple'`.
+ * Represents an extension of the simple product type, where `productType: 'configurable'`.
  *
  * @property attributes - An array of attributes for a given product, e.g., padding type, size, and bib type for a foil mask.
  * @property products - An array of product configurations with their associated attributes and selected options and their prices.
@@ -122,9 +122,8 @@ export type LeonPaulConfigurableProduct = LeonPaulSimpleProduct & {
 
 
 /**
- * Represents an extension of the base product, where `productType: 'bundle'`.
+ * Represents an extension of the simple product type, where `productType: 'bundle'`.
  *
- * @property productType - The product type of a given product. In this case, bundle, because it has a set of options whose price must be added up to find total price.
  * @property options - An array of options for a given product, .e.g, grip, blade, or guard for the "Custom Foil Creator" product.
  *
  * @see CartItemOption
