@@ -1,6 +1,5 @@
-import {Product} from './Product/Product'
-import {MagentoInit} from './MagentoInit/MagentoInit'
-
+import { Product } from './Product/Product'
+import { MagentoInit } from './MagentoInit/MagentoInit'
 
 /**
  * Represents the data collected from scraping a Leon Paul product page.
@@ -12,6 +11,6 @@ import {MagentoInit} from './MagentoInit/MagentoInit'
  * @see MagentoInit
  */
 export type LeonPaulPageData = {
-    product: Product,
-    magentoInit: MagentoInit,
+    product: Product
+    magentoInit: MagentoInit
 }
