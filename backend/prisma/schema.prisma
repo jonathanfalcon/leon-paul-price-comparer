@@ -61,3 +61,20 @@ model RegionalProductData {
   @@id([sku, country])
   @@unique([sku, country])
 }
+
+// This is where regional product configuration data when `productType: 'configurable'` is stored. This table closely resembles type CartItemProduct in `types/AppData/LeonPaulProduct/LeonPaulProduct.ts`
+model RegionalProductData_Configurable_Product {
+  sku                                                       String
+  country                                                   CountryCode
+  productId                                                 String
+  price_beforeTax                                           Float
+  price_afterTax                                            Float
+  // Define foreign key relationship to RegionalProductData table
+  RegionalProductData                                       RegionalProductData                                         @relation(fields: [sku, country], references: [sku, country])
+  // Define one-to-many relationship with RegionalProductData_Configurable_Products_OptionSelection table
+  RegionalProductData_Configurable_Product_OptionSelection RegionalProductData_Configurable_Product_OptionSelection[]
+
+  // Define composite primary key
+  @@id([sku, country, productId])
+  @@unique([sku, country, productId])
+}
