@@ -13,7 +13,6 @@ type ExchangeRateMap = {
     }
 }
 
-
 /**
  * Represents the exchange rate object inside the web app.
  *
@@ -22,7 +21,7 @@ type ExchangeRateMap = {
  *
  * @see ExchangeRates
  */
-export type ExchangeRate =  {
-    exchangeRate: ExchangeRateMap,
-    lastFetch: number,
+export type ExchangeRate = {
+    exchangeRate: ExchangeRateMap
+    lastFetch: number
 }
