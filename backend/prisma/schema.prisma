@@ -39,3 +39,25 @@ model Product {
   // Define one-to-many relationship with RegionalProductData table
   RegionalProductData RegionalProductData[]
 }
+
+// This is where regional product data is stored. The RegionalProductData table closely resembles types in union type LeonPaulProduct in `types/AppData/LeonPaulProduct/LeonPaulProduct.ts`
+model RegionalProductData {
+  sku                                        String
+  country                                    CountryCode
+  itemName                                   String
+  url                                        String
+  price_beforeTax                            Float
+  price_afterTax                             Float
+  // Define foreign key relationship to Product table
+  Product                                    Product                                      @relation(fields: [sku], references: [sku])
+  // Define one-to-many relationship with RegionalProductData_Configurable_Product table
+  RegionalProductData_Configurable_Product   RegionalProductData_Configurable_Product[]
+  // Define one-to-many relationship with RegionalProductData_Configurable_Attribute table
+  RegionalProductData_Configurable_Attribute RegionalProductData_Configurable_Attribute[]
+  // Define one-to-many relationship with RegionalProductData_Bundle_Option table
+  RegionalProductData_Bundle_Option          RegionalProductData_Bundle_Option[]
+
+  // Define composite primary key
+  @@id([sku, country])
+  @@unique([sku, country])
+}
