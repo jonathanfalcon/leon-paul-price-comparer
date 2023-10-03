@@ -7,11 +7,10 @@ import { Prices } from '../Common/Prices'
  * @property options - An array of options for a given product attribute.
  */
 export type AttributesItem = {
-    id: string,
-    label: string,
-    options: AttributesItemOption[],
+    id: string
+    label: string
+    options: AttributesItemOption[]
 }
-
 
 /**
  * Represents an option for an attribute item, e.g., standard, ice, or air padding for the attribute padding type.
@@ -19,16 +18,14 @@ export type AttributesItem = {
  * @property label - The label for a given attribute option.
  */
 export type AttributesItemOption = {
-    id: string,
-    label: string,
+    id: string
+    label: string
 }
-
 
 /**
  * Represents a set of product attributes, which are key-value pairs describing various characteristics of a product.
  */
 export type Attributes = Record<string, AttributesItem>
-
 
 /**
  * Represents a collection of product configuration prices.
@@ -37,14 +34,12 @@ export type Attributes = Record<string, AttributesItem>
  */
 export type OptionPrices = Record<string, Prices>
 
-
 /**
  * Represents a mapping of product configurations to their associated attributes and selected options.
  *
  * It's a set of key-value pairs where each key represents a product configuration's identifier, and the corresponding value is another set of key-value pairs representing attribute identifiers and the chosen option's identifier for that attribute.
  */
 export type Index = Record<string, Record<string, string>>
-
 
 /**
  * Represents the properties of a configurable product's JSON.
@@ -57,11 +52,10 @@ export type Index = Record<string, Record<string, string>>
  * @see Index
  */
 export type ConfigurableConfig = {
-    attributes: Attributes,
-    optionPrices: OptionPrices,
-    index: Index,
+    attributes: Attributes
+    optionPrices: OptionPrices
+    index: Index
 }
-
 
 /**
  * Represents the structure of magento-init for a product with a single set of options.
@@ -71,11 +65,10 @@ export type ConfigurableConfig = {
 export type OneOptionSet = {
     '#product_addtocart_form': {
         configurable: {
-            spConfig: ConfigurableConfig,
-        },
-    },
+            spConfig: ConfigurableConfig
+        }
+    }
 }
-
 
 /**
  * Represents the structure of magento-init for a product with multiple set of options.
@@ -85,11 +78,10 @@ export type OneOptionSet = {
 export type MultipleOptionSet = {
     '[data-role=swatch-options]': {
         'Magento_Swatches/js/swatch-renderer': {
-            jsonConfig: ConfigurableConfig,
-        },
-    },
+            jsonConfig: ConfigurableConfig
+        }
+    }
 }
-
 
 /**
  * Represents the possible structures of magento-init for a product where `"product_type": "configurable"`.
