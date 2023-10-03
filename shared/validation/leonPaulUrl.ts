@@ -12,15 +12,14 @@ import { CountryCode, CountryDomain } from '@leon-paul-price-comparer/types'
  * @property anchor - The URL anchor (e.g., fragment identifier, `#section`).
  */
 type UrlComponents = {
-    protocol: string,
-    subdomain: string,
-    domain: string,
-    path: string,
-    extension: string,
-    query: string,
-    anchor: string,
+    protocol: string
+    subdomain: string
+    domain: string
+    path: string
+    extension: string
+    query: string
+    anchor: string
 }
-
 
 /**
  * Dissects a given URL into its main components. The URL is standardized it in the process by forcing protocol to `https` and suffix to `html`.
@@ -44,9 +43,7 @@ type UrlComponents = {
  */
 const extractUrlComponents = (urlString: string): UrlComponents => {
     try {
-        const urlDirty = new URI(urlString)
-            .protocol('https')
-            .suffix('html')
+        const urlDirty = new URI(urlString).protocol('https').suffix('html')
 
         const url = new URI(urlDirty.readable())
         url.normalize()
@@ -60,7 +57,7 @@ const extractUrlComponents = (urlString: string): UrlComponents => {
             query: url.query() || '',
             anchor: url.hash() || '',
         }
-    } catch(error) {
+    } catch (error) {
         return {
             protocol: '',
             subdomain: '',
@@ -72,7 +69,6 @@ const extractUrlComponents = (urlString: string): UrlComponents => {
         }
     }
 }
-
 
 /**
  * Validates that a given URL is a Leon Paul URL.
@@ -94,7 +90,6 @@ const clean = (url: string): string => {
     const { domain, path } = extractUrlComponents(url)
     return url ? `https://www.${domain}${path}` : ''
 }
-
 
 /**
  * Identifies which regional site a Leon Paul URL belongs to.
@@ -131,7 +126,6 @@ const region = (url: string): CountryCode => {
             throw new Error('Given URL is not a valid Leon Paul URL.')
     }
 }
-
 
 /**
  * An object containing functions for working with Leon Paul URLs.
