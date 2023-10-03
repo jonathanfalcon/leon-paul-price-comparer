@@ -10,7 +10,8 @@
  * - `leonpaulukraine.com` - Ukraine
  * - `leonpaulusa.com` - United States
  */
-export type CountryDomain = 'leonpaulaustralia.com'
+export type CountryDomain =
+    | 'leonpaulaustralia.com'
     | 'leonpaulcanada.com'
     | 'leonpaulgermany.com'
     | 'leonpaulfrance.com'
@@ -18,7 +19,6 @@ export type CountryDomain = 'leonpaulaustralia.com'
     | 'leonpaul.com'
     | 'leonpaulukraine.com'
     | 'leonpaulusa.com'
-
 
 /**
  * Represents all the possible Leon Paul regional sites and their corresponding ISO country codes.
@@ -33,7 +33,6 @@ export type CountryDomain = 'leonpaulaustralia.com'
  * - `USA` (United States) - leonpaulusa.com
  */
 export type CountryCode = 'AUS' | 'CAN' | 'DEU' | 'FRA' | 'ITA' | 'GBR' | 'UKR' | 'USA'
-
 
 /**
  * Represents all the possible currencies found on Leon Paul's websites.
