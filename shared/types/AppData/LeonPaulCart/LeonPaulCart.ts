@@ -1,5 +1,10 @@
-import {CountryCode, ProductType} from '../..'
-import {LeonPaulProduct, LeonPaulSimpleProduct, LeonPaulConfigurableProduct, LeonPaulBundleProduct} from './LeonPaulProduct'
+import { CountryCode, ProductType } from '../..'
+import {
+    LeonPaulProduct,
+    LeonPaulSimpleProduct,
+    LeonPaulConfigurableProduct,
+    LeonPaulBundleProduct,
+} from './LeonPaulProduct'
 
 /**
  * Represents all the regional product data.
@@ -11,7 +16,6 @@ export type LeonPaulRegionalProductCollection<Product extends LeonPaulProduct> =
     [country in CountryCode]: Product
 }
 
-
 /**
  * Represents the common structure of an item found in the web app's Leon Paul cart. Contains general product information and regional product information.
  * @property sku - The SKU of a given product. This is valid for search on Leon Paul's website.
@@ -22,14 +26,13 @@ export type LeonPaulRegionalProductCollection<Product extends LeonPaulProduct> =
  * @property productType - The product type of a given product. Can only be one of three values: `simple`, `configurable`, or `bundle`.
  */
 export type LeonPaulCartItemBase<ProductTypeString extends ProductType> = {
-    sku: string,
-    imageUrl: string,
-    quantity: number,
-    lastFetch: number,
-    index: number,
-    productType: ProductTypeString,
+    sku: string
+    imageUrl: string
+    quantity: number
+    lastFetch: number
+    index: number
+    productType: ProductTypeString
 }
-
 
 /**
  * Represents a simple item found in the web app's Leon Paul cart, where `productType: 'simple'`.
@@ -37,8 +40,8 @@ export type LeonPaulCartItemBase<ProductTypeString extends ProductType> = {
  * @see LeonPaulCartItemBase
  * @see LeonPaulRegionalProductCollection
  */
-export type LeonPaulCartItemSimple = LeonPaulCartItemBase<'simple'> &  LeonPaulRegionalProductCollection<LeonPaulSimpleProduct>
-
+export type LeonPaulCartItemSimple = LeonPaulCartItemBase<'simple'> &
+    LeonPaulRegionalProductCollection<LeonPaulSimpleProduct>
 
 /**
  * Represents a configurable item found in the web app's Leon Paul cart, where `productType: 'configurable'`.
@@ -46,8 +49,8 @@ export type LeonPaulCartItemSimple = LeonPaulCartItemBase<'simple'> &  LeonPaulR
  * @see LeonPaulCartItemBase
  * @see LeonPaulRegionalProductCollection
  */
-export type LeonPaulCartItemConfigurable = LeonPaulCartItemBase<'configurable'> &  LeonPaulRegionalProductCollection<LeonPaulConfigurableProduct>
-
+export type LeonPaulCartItemConfigurable = LeonPaulCartItemBase<'configurable'> &
+    LeonPaulRegionalProductCollection<LeonPaulConfigurableProduct>
 
 /**
  * Represents a bundle item found in the web app's Leon Paul cart, where `productType: 'bundle'`.
@@ -55,8 +58,8 @@ export type LeonPaulCartItemConfigurable = LeonPaulCartItemBase<'configurable'> 
  * @see LeonPaulCartItemBase
  * @see LeonPaulRegionalProductCollection
  */
-export type LeonPaulCartItemBundle = LeonPaulCartItemBase<'bundle'> &  LeonPaulRegionalProductCollection<LeonPaulBundleProduct>
-
+export type LeonPaulCartItemBundle = LeonPaulCartItemBase<'bundle'> &
+    LeonPaulRegionalProductCollection<LeonPaulBundleProduct>
 
 /**
  * Represents all the possible cart items.
@@ -65,8 +68,10 @@ export type LeonPaulCartItemBundle = LeonPaulCartItemBase<'bundle'> &  LeonPaulR
  * @see LeonPaulCartItemConfigurable
  * @see LeonPaulCartItemBundle
  */
-export type LeonPaulCartItem = LeonPaulCartItemSimple | LeonPaulCartItemConfigurable | LeonPaulCartItemBundle
-
+export type LeonPaulCartItem =
+    | LeonPaulCartItemSimple
+    | LeonPaulCartItemConfigurable
+    | LeonPaulCartItemBundle
 
 /**
  * Represents a collection of Leon Paul cart items.
