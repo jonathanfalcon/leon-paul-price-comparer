@@ -27,6 +27,7 @@ enum CountryCode {
   UKR
   USA
 }
+
 // Start `model`
 
 // This is where common product data is stored. The Product table closely resembles type LeonPaulCartItemBase in `types/AppData/LeonPaulCart/LeonPaulCart.ts`
@@ -64,13 +65,13 @@ model RegionalProductData {
 
 // This is where regional product configuration data when `productType: 'configurable'` is stored. This table closely resembles type CartItemProduct in `types/AppData/LeonPaulProduct/LeonPaulProduct.ts`
 model RegionalProductData_Configurable_Product {
-  sku                                                       String
-  country                                                   CountryCode
-  productId                                                 String
-  price_beforeTax                                           Float
-  price_afterTax                                            Float
+  sku                                                      String
+  country                                                  CountryCode
+  productId                                                String
+  price_beforeTax                                          Float
+  price_afterTax                                           Float
   // Define foreign key relationship to RegionalProductData table
-  RegionalProductData                                       RegionalProductData                                         @relation(fields: [sku, country], references: [sku, country])
+  RegionalProductData                                      RegionalProductData                                        @relation(fields: [sku, country], references: [sku, country])
   // Define one-to-many relationship with RegionalProductData_Configurable_Products_OptionSelection table
   RegionalProductData_Configurable_Product_OptionSelection RegionalProductData_Configurable_Product_OptionSelection[]
 
@@ -96,12 +97,12 @@ model RegionalProductData_Configurable_Product_OptionSelection {
 
 // This is where regional product attribute data when `productType: 'configurable'` is stored. This table closely resembles type CartItemAttribute in `types/AppData/LeonPaulProduct/LeonPaulProduct.ts`
 model RegionalProductData_Configurable_Attribute {
-  sku                                                String
-  country                                            CountryCode
-  attributeName                                      String
-  attributeId                                        String
+  sku                                               String
+  country                                           CountryCode
+  attributeName                                     String
+  attributeId                                       String
   // Define foreign key relationship to RegionalProductData table
-  RegionalProductData                                RegionalProductData                                  @relation(fields: [sku, country], references: [sku, country])
+  RegionalProductData                               RegionalProductData                                 @relation(fields: [sku, country], references: [sku, country])
   // Define one-to-many relationship with RegionalProductData_Configurable_Attribute_Option table
   RegionalProductData_Configurable_Attribute_Option RegionalProductData_Configurable_Attribute_Option[]
 
@@ -127,11 +128,11 @@ model RegionalProductData_Configurable_Attribute_Option {
 
 // This is where regional product bundle options data when `productType: 'bundle'` is stored. This table closely resembles type CartItemOption in `types/AppData/LeonPaulProduct/LeonPaulProduct.ts`
 model RegionalProductData_Bundle_Option {
-  sku                                          String
-  country                                      CountryCode
-  optionName                                   String
+  sku                                         String
+  country                                     CountryCode
+  optionName                                  String
   // Define foreign key relationship to RegionalProductData table
-  RegionalProductData                          RegionalProductData                            @relation(fields: [sku, country], references: [sku, country])
+  RegionalProductData                         RegionalProductData                           @relation(fields: [sku, country], references: [sku, country])
   // Define one-to-many relationship with RegionalProductData_Bundle_Option_Selection table
   RegionalProductData_Bundle_Option_Selection RegionalProductData_Bundle_Option_Selection[]
 
