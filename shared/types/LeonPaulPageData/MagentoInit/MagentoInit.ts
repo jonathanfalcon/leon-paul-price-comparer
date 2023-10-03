@@ -1,6 +1,6 @@
-import {SimpleProduct} from './SimpleProduct'
-import {ConfigurableProduct} from './ConfigurableProduct'
-import {BundleProduct} from './BundleProduct'
+import { SimpleProduct } from './SimpleProduct'
+import { ConfigurableProduct } from './ConfigurableProduct'
+import { BundleProduct } from './BundleProduct'
 
 /**
  * Represents all the possible structures of magento-init.
