@@ -6,16 +6,14 @@
  */
 export type ItemPriceInfo = {
     price_info: {
-        final_price: number,
+        final_price: number
         extension_attributes: {
             tax_adjustments: {
-                final_price: number,
-            },
-        },
-    },
+                final_price: number
+            }
+        }
+    }
 }
-
-
 
 /**
  * Represents the properties of a simple product's JSON.
@@ -25,10 +23,8 @@ export type ItemPriceInfo = {
  * @see ItemPriceInfo
  */
 export type SimpleConfig = {
-    items: Record<string, ItemPriceInfo>,
+    items: Record<string, ItemPriceInfo>
 }
-
-
 
 /**
  * Represents the structure of magento-init for a product where `"product_type": "simple"`.
@@ -38,7 +34,7 @@ export type SimpleConfig = {
 export type SimpleProduct = {
     '*': {
         'Magento_Catalog/js/product/view/provider': {
-            data: SimpleConfig,
-        },
-    },
+            data: SimpleConfig
+        }
+    }
 }
