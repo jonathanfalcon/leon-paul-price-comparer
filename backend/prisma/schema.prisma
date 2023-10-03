@@ -124,3 +124,18 @@ model RegionalProductData_Configurable_Attribute_Option {
   @@id([sku, country, attributeId, optionId])
   @@unique([sku, country, attributeId, optionId])
 }
+
+// This is where regional product bundle options data when `productType: 'bundle'` is stored. This table closely resembles type CartItemOption in `types/AppData/LeonPaulProduct/LeonPaulProduct.ts`
+model RegionalProductData_Bundle_Option {
+  sku                                          String
+  country                                      CountryCode
+  optionName                                   String
+  // Define foreign key relationship to RegionalProductData table
+  RegionalProductData                          RegionalProductData                            @relation(fields: [sku, country], references: [sku, country])
+  // Define one-to-many relationship with RegionalProductData_Bundle_Option_Selection table
+  RegionalProductData_Bundle_Option_Selection RegionalProductData_Bundle_Option_Selection[]
+
+  // Define composite primary key
+  @@id([sku, country, optionName])
+  @@unique([sku, country, optionName])
+}
