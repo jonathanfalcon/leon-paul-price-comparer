@@ -78,3 +78,18 @@ model RegionalProductData_Configurable_Product {
   @@id([sku, country, productId])
   @@unique([sku, country, productId])
 }
+
+// This is where regional product configuration data regarding selections is stored. This table closely resembles property `optionSelection` in type CartItemProduct in `types/AppData/LeonPaulProduct/LeonPaulProduct.ts`
+model RegionalProductData_Configurable_Product_OptionSelection {
+  sku                                      String
+  country                                  CountryCode
+  productId                                String
+  attributeId                              String
+  optionId                                 String
+  // Define foreign key relationship to RegionalProductData_Configurable_Product table
+  RegionalProductData_Configurable_Product RegionalProductData_Configurable_Product @relation(fields: [sku, country, productId], references: [sku, country, productId])
+
+  // Define composite primary key
+  @@id([sku, country, productId, attributeId, optionId])
+  @@unique([sku, country, productId, attributeId, optionId])
+}
