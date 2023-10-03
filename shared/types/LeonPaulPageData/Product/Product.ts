@@ -1,4 +1,4 @@
-import {ProductType} from '../..'
+import { ProductType } from '../..'
 
 /**
  * Represents the structure of product object in `window.dataLayer`.
@@ -10,9 +10,9 @@ import {ProductType} from '../..'
  * @property image_url - The url for a given product's image.
  */
 export type Product = {
-    id: string,
-    sku: string,
-    name: string,
-    product_type: ProductType,
-    image_url: string,
+    id: string
+    sku: string
+    name: string
+    product_type: ProductType
+    image_url: string
 }
