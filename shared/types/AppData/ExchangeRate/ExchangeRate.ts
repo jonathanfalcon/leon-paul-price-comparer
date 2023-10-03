@@ -17,7 +17,7 @@ type ExchangeRateMap = {
  * Represents the exchange rate object inside the web app.
  *
  * @property exchangeRate - An object that contains exchange rates between different currencies.
- * @property lastFetch - A timestamp indicating when the exchange rate data was last fetched and updated. It is generated and stored in Coordinated Universal Time (UTC).
+ * @property lastFetch - A timestamp indicating when the exchange rate data was last fetched and updated. It is generated and stored in Coordinated Universal Time (UTC) as seconds.
  *
  * @see ExchangeRates
  */

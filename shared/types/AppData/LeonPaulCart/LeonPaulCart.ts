@@ -21,7 +21,7 @@ export type LeonPaulRegionalProductCollection<Product extends LeonPaulProduct> =
  * @property sku - The SKU of a given product. This is valid for search on Leon Paul's website.
  * @property imageUrl - The url for a given product's image.
  * @property quantity - The quantity of this item in the cart.
- * @property lastFetch - A timestamp indicating when the product data was last fetched and updated. It is generated and stored in Coordinated Universal Time (UTC).
+ * @property lastFetch - A timestamp indicating when the product data was last fetched and updated. It is generated and stored in Coordinated Universal Time (UTC) as seconds.
  * @property index - Indicates the position of this item in the cart. Used for repositioning and keeping track of order.
  * @property productType - The product type of a given product. Can only be one of three values: `simple`, `configurable`, or `bundle`.
  */
