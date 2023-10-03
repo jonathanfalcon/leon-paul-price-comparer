@@ -7,9 +7,9 @@
  */
 export type Prices = {
     basePrice: {
-        amount: number,
-    },
+        amount: number
+    }
     finalPrice: {
-        amount: number,
-    },
+        amount: number
+    }
 }
