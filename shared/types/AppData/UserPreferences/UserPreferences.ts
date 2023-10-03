@@ -1,4 +1,4 @@
-import {CountryCode, CurrencyCode} from '../..'
+import { CountryCode, CurrencyCode } from '../..'
 
 /**
  * Represents available user preferences in web app.
@@ -11,10 +11,10 @@ import {CountryCode, CurrencyCode} from '../..'
  * @see CountryCode
  */
 export type UserPreferences = {
-    afterTax: boolean,
-    purchasingCurrency: CurrencyCode,
+    afterTax: boolean
+    purchasingCurrency: CurrencyCode
     regions: {
-        baseRegion: CountryCode,
-        comparisonRegion: CountryCode,
-    },
+        baseRegion: CountryCode
+        comparisonRegion: CountryCode
+    }
 }
