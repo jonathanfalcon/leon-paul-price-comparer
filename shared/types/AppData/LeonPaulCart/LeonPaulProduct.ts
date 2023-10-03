@@ -4,10 +4,9 @@
  * @property afterTax - The price after tax.
  */
 export type Price = {
-    beforeTax: number,
-    afterTax: number,
+    beforeTax: number
+    afterTax: number
 }
-
 
 /**
  * Represents a selection in a category of a product where `productType: 'bundle'`.
@@ -19,12 +18,11 @@ export type Price = {
  * @property isChosen - Boolean value indicating whether this selection was chosen in the web app.
  */
 export type CartItemOptionSelection = {
-    selectionName: string,
-    selectionId: string,
-    price: Price,
-    isChosen: boolean,
+    selectionName: string
+    selectionId: string
+    price: Price
+    isChosen: boolean
 }
-
 
 /**
  * Represents a category of a product where `productType: 'bundle'`.
@@ -36,11 +34,9 @@ export type CartItemOptionSelection = {
  * @see CartItemOptionSelection
  */
 export type CartItemOption = {
-    optionName: string,
-    selections: CartItemOptionSelection[],
+    optionName: string
+    selections: CartItemOptionSelection[]
 }
-
-
 
 /**
  * Represents an option for an attribute item, e.g., standard, ice, or air padding for the attribute padding type.
@@ -51,11 +47,10 @@ export type CartItemOption = {
  * @property isChosen - Boolean value indicating whether this option was chosen in the web app.
  */
 export type CartItemAttributeOption = {
-    optionName: string,
-    optionId: string,
-    isChosen: boolean,
+    optionName: string
+    optionId: string
+    isChosen: boolean
 }
-
 
 /**
  * Represents an attribute item for a product, e.g., padding type, size, or bib type for a foil mask.
@@ -68,11 +63,10 @@ export type CartItemAttributeOption = {
  * @see CartItemAttributeOption
  */
 export type CartItemAttribute = {
-    attributeName: string,
-    attributeId: string,
-    options: CartItemAttributeOption[],
+    attributeName: string
+    attributeId: string
+    options: CartItemAttributeOption[]
 }
-
 
 /**
  * Represents a mapping of product configurations to their associated attributes and selected options.
@@ -83,14 +77,13 @@ export type CartItemAttribute = {
  * @property price - The total price (before and after tax) of a given product configuration.
  */
 export type CartItemProduct = {
-    productId: string,
+    productId: string
     optionSelection: {
-        attributeId: string,
-        optionId: string,
-    }[],
-    price: Price,
+        attributeId: string
+        optionId: string
+    }[]
+    price: Price
 }
-
 
 /**
  * Represents the most basic, common structure of a Leon Paul Product. Both configurable and bundle product type are extensions of this.
@@ -100,11 +93,10 @@ export type CartItemProduct = {
  * @property price - The total price (before and after tax) of a given product.
  */
 export type LeonPaulSimpleProduct = {
-    itemName: string,
-    url: string,
-    price: Price,
+    itemName: string
+    url: string
+    price: Price
 }
-
 
 /**
  * Represents an extension of the simple product type, where `productType: 'configurable'`.
@@ -116,10 +108,9 @@ export type LeonPaulSimpleProduct = {
  * @see CartItemProduct
  */
 export type LeonPaulConfigurableProduct = LeonPaulSimpleProduct & {
-    attributes: CartItemAttribute[],
-    products: CartItemProduct[],
+    attributes: CartItemAttribute[]
+    products: CartItemProduct[]
 }
-
 
 /**
  * Represents an extension of the simple product type, where `productType: 'bundle'`.
@@ -129,9 +120,8 @@ export type LeonPaulConfigurableProduct = LeonPaulSimpleProduct & {
  * @see CartItemOption
  */
 export type LeonPaulBundleProduct = LeonPaulSimpleProduct & {
-    options: CartItemOption[],
+    options: CartItemOption[]
 }
-
 
 /**
  * Represents a Leon Paul product, which can be a simple product, a configurable product, or a bundle product.
@@ -140,4 +130,7 @@ export type LeonPaulBundleProduct = LeonPaulSimpleProduct & {
  * @see LeonPaulConfigurableProduct
  * @see LeonPaulBundleProduct
  */
-export type LeonPaulProduct = LeonPaulSimpleProduct | LeonPaulConfigurableProduct | LeonPaulBundleProduct
+export type LeonPaulProduct =
+    | LeonPaulSimpleProduct
+    | LeonPaulConfigurableProduct
+    | LeonPaulBundleProduct
