@@ -167,3 +167,15 @@ model RegionalProductData_Bundle_Option_Selection {
   @@id([sku, country, optionName, selectionId])
   @@unique([sku, country, optionName, selectionId])
 }
+
+// This is where exchange rate data is stored. This table closely resembles type ExchangeRate in `types/AppData/ExchangeRate/ExchangeRate.ts`
+model ExchangeRate {
+  base      CurrencyCode
+  target    CurrencyCode
+  rate      Float
+  lastFetch Int
+
+  // Define composite primary key
+  @@id([base, target])
+  @@unique([base, target])
+}
