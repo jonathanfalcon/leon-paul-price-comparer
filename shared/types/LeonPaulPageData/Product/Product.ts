@@ -1,3 +1,5 @@
+import {ProductType} from '../..'
+
 /**
  * Represents the structure of product object in `window.dataLayer`.
  *
@@ -11,6 +13,6 @@ export type Product = {
     id: string,
     sku: string,
     name: string,
-    product_type: 'simple' | 'configurable' | 'bundle',
+    product_type: ProductType,
     image_url: string,
 }
