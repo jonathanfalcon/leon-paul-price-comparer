@@ -102,10 +102,25 @@ model RegionalProductData_Configurable_Attribute {
   attributeId                                        String
   // Define foreign key relationship to RegionalProductData table
   RegionalProductData                                RegionalProductData                                  @relation(fields: [sku, country], references: [sku, country])
-  // Define one-to-many relationship with RegionalProductData_Configurable_Attributes_Option table
-  RegionalProductData_Configurable_Attributes_Option RegionalProductData_Configurable_Attributes_Option[]
+  // Define one-to-many relationship with RegionalProductData_Configurable_Attribute_Option table
+  RegionalProductData_Configurable_Attribute_Option RegionalProductData_Configurable_Attribute_Option[]
 
   // Define composite primary key
   @@id([sku, country, attributeId])
   @@unique([sku, country, attributeId])
+}
+
+// This is where regional product attribute options data. This table closely resembles type CartItemAttributeOption in `types/AppData/LeonPaulProduct/LeonPaulProduct.ts`
+model RegionalProductData_Configurable_Attribute_Option {
+  sku                                        String
+  country                                    CountryCode
+  attributeId                                String
+  optionName                                 String
+  optionId                                   String
+  // Define foreign key relationship to RegionalProductData_Configurable_Attribute table
+  RegionalProductData_Configurable_Attribute RegionalProductData_Configurable_Attribute @relation(fields: [sku, country, attributeId], references: [sku, country, attributeId])
+
+  // Define composite primary key
+  @@id([sku, country, attributeId, optionId])
+  @@unique([sku, country, attributeId, optionId])
 }
