@@ -139,3 +139,20 @@ model RegionalProductData_Bundle_Option {
   @@id([sku, country, optionName])
   @@unique([sku, country, optionName])
 }
+
+// This is where regional product bundle option selections data when `productType: 'bundle'` is stored. This table closely resembles type CartItemOptionSelection in `types/AppData/LeonPaulProduct/LeonPaulProduct.ts`
+model RegionalProductData_Bundle_Option_Selection {
+  sku                               String
+  country                           CountryCode
+  optionName                        String
+  selectionName                     String
+  selectionId                       String
+  price_beforeTax                   Float
+  price_afterTax                    Float
+  // Define foreign key relationship to RegionalProductData table
+  RegionalProductData_Bundle_Option RegionalProductData_Bundle_Option @relation(fields: [sku, country, optionName], references: [sku, country, optionName])
+
+  // Define composite primary key
+  @@id([sku, country, optionName, selectionId])
+  @@unique([sku, country, optionName, selectionId])
+}
