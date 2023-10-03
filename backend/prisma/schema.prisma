@@ -6,3 +6,24 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+// Start `enum`
+
+// Defines all valid product types. See `types/Common/ProductType.ts`.
+enum ProductType {
+  simple
+  configurable
+  bundle
+}
+
+// Defines all country codes. See `types/Common/RegionCodes.ts`.
+enum CountryCode {
+  AUS
+  CAN
+  DEU
+  FRA
+  ITA
+  GBR
+  UKR
+  USA
+}
