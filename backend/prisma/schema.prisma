@@ -28,6 +28,16 @@ enum CountryCode {
   USA
 }
 
+// Defines all currency codes. See `types/Common/RegionCodes.ts`.
+enum CurrencyCode {
+  AUD
+  CAD
+  EUR
+  GBP
+  UAH
+  USD
+}
+
 // Start `model`
 
 // This is where common product data is stored. The Product table closely resembles type LeonPaulCartItemBase in `types/AppData/LeonPaulCart/LeonPaulCart.ts`
