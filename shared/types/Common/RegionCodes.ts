@@ -1,40 +1,48 @@
 /**
  * Represents mapping of ISO country codes and their respective Leon Paul regional sites and ISO currency codes.
  */
-export type CountryCodeDomainCurrencyMap = {
-    AUS: {
+export type CountryCodeDomainCurrencyArray = [
+    {
+        country: 'AUS'
         domain: 'leonpaulaustralia.com'
         currency: 'AUD'
-    }
-    CAN: {
+    },
+    {
+        country: 'CAN'
         domain: 'leonpaulcanada.com'
         currency: 'CAD'
-    }
-    DEU: {
+    },
+    {
+        country: 'DEU'
         domain: 'leonpaulgermany.com'
         currency: 'EUR'
-    }
-    FRA: {
+    },
+    {
+        country: 'FRA'
         domain: 'leonpaulfrance.com'
         currency: 'EUR'
-    }
-    ITA: {
+    },
+    {
+        country: 'ITA'
         domain: 'leonpaulitaly.com'
         currency: 'EUR'
-    }
-    GBR: {
+    },
+    {
+        country: 'GBR'
         domain: 'leonpaul.com'
         currency: 'GBP'
-    }
-    UKR: {
+    },
+    {
+        country: 'UKR'
         domain: 'leonpaulukraine.com'
         currency: 'UAH'
-    }
-    USA: {
+    },
+    {
+        country: 'USA'
         domain: 'leonpaulusa.com'
         currency: 'USD'
-    }
-}
+    },
+]
 
 /**
  * Represents all the possible Leon Paul regional sites.
@@ -48,7 +56,7 @@ export type CountryCodeDomainCurrencyMap = {
  * - `leonpaulukraine.com` - Ukraine
  * - `leonpaulusa.com` - United States
  */
-export type CountryDomain = CountryCodeDomainCurrencyMap[CountryCode]['domain']
+export type CountryDomain = CountryCodeDomainCurrencyArray[number]['domain']
 
 /**
  * Represents all the possible Leon Paul regional sites and their corresponding ISO country codes.
@@ -62,7 +70,7 @@ export type CountryDomain = CountryCodeDomainCurrencyMap[CountryCode]['domain']
  * - `UKR` (Ukraine) - leonpaulukraine.com
  * - `USA` (United States) - leonpaulusa.com
  */
-export type CountryCode = keyof CountryCodeDomainCurrencyMap
+export type CountryCode = CountryCodeDomainCurrencyArray[number]['country']
 
 /**
  * Represents all the possible currencies found on Leon Paul's websites.
@@ -74,4 +82,4 @@ export type CountryCode = keyof CountryCodeDomainCurrencyMap
  * - `UAH` (Ukrainian Hryvnia) - Used on leonpaulukraine.com
  * - `USD` (US Dollar) - Used on leonpaulusa.com
  */
-export type CurrencyCode = CountryCodeDomainCurrencyMap[CountryCode]['currency']
+export type CurrencyCode = CountryCodeDomainCurrencyArray[number]['currency']
