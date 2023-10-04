@@ -1,5 +1,6 @@
 import URI from 'urijs'
 import { CountryCode, CountryDomain } from '@leon-paul-price-comparer/types'
+import { countryCodeDomainCurrencyArray } from '@leon-paul-price-comparer/utils/objects'
 
 /**
  * Represents the components of a URL.
@@ -76,9 +77,9 @@ const extractUrlComponents = (urlString: string): UrlComponents => {
  * @returns Returns `true` if the url domain matched a Leon Paul domain; `false` if otherwise.
  */
 const validate = (url: string): boolean => {
-    const regex = new RegExp(`^(leonpaul(?:usa)?\\.com)$`)
+    const validDomains = countryCodeDomainCurrencyArray.map(country => country.domain)
     const { domain } = extractUrlComponents(url)
-    return regex.test(domain)
+    return validDomains.includes(domain as CountryDomain)
 }
 
 /**
