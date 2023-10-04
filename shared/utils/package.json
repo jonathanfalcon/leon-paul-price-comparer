@@ -1,0 +1,8 @@
+{
+  "name": "@leon-paul-price-comparer/utils",
+  "version": "1.0.0",
+  "description": "Collection of utility objects, functions, and more used in leon-paul-price-comparer",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
+}
