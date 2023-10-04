@@ -1,4 +1,18 @@
 /**
+ * Represents mapping of ISO country codes and their respective Leon Paul regional sites.
+ */
+export type CountryCodeDomainMap = {
+    AUS: 'leonpaulaustralia.com'
+    CAN: 'leonpaulcanada.com'
+    DEU: 'leonpaulgermany.com'
+    FRA: 'leonpaulfrance.com'
+    ITA: 'leonpaulitaly.com'
+    GBR: 'leonpaul.com'
+    UKR: 'leonpaulukraine.com'
+    USA: 'leonpaulusa.com'
+}
+
+/**
  * Represents all the possible Leon Paul regional sites.
  *
  * - `leonpaulaustralia.com` - Australia
