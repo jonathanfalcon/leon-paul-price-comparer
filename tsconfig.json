@@ -3,7 +3,8 @@
     "target": "ESNext",
     "module": "ESNext",
     "esModuleInterop": true,
-    "moduleResolution": "nodenext"
+    "moduleResolution": "nodenext",
+    "strictNullChecks": true
   },
   "exclude": ["node_modules"]
 }
