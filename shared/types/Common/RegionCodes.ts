@@ -24,15 +24,7 @@ export type CountryCodeDomainMap = {
  * - `leonpaulukraine.com` - Ukraine
  * - `leonpaulusa.com` - United States
  */
-export type CountryDomain =
-    | 'leonpaulaustralia.com'
-    | 'leonpaulcanada.com'
-    | 'leonpaulgermany.com'
-    | 'leonpaulfrance.com'
-    | 'leonpaulitaly.com'
-    | 'leonpaul.com'
-    | 'leonpaulukraine.com'
-    | 'leonpaulusa.com'
+export type CountryDomain = CountryCodeDomainMap[CountryCode]
 
 /**
  * Represents all the possible Leon Paul regional sites and their corresponding ISO country codes.
@@ -46,7 +38,7 @@ export type CountryDomain =
  * - `UKR` (Ukraine) - leonpaulukraine.com
  * - `USA` (United States) - leonpaulusa.com
  */
-export type CountryCode = 'AUS' | 'CAN' | 'DEU' | 'FRA' | 'ITA' | 'GBR' | 'UKR' | 'USA'
+export type CountryCode = keyof CountryCodeDomainMap
 
 /**
  * Represents all the possible currencies found on Leon Paul's websites.
