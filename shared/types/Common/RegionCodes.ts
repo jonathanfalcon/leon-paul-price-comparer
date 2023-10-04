@@ -1,15 +1,39 @@
 /**
- * Represents mapping of ISO country codes and their respective Leon Paul regional sites.
+ * Represents mapping of ISO country codes and their respective Leon Paul regional sites and ISO currency codes.
  */
-export type CountryCodeDomainMap = {
-    AUS: 'leonpaulaustralia.com'
-    CAN: 'leonpaulcanada.com'
-    DEU: 'leonpaulgermany.com'
-    FRA: 'leonpaulfrance.com'
-    ITA: 'leonpaulitaly.com'
-    GBR: 'leonpaul.com'
-    UKR: 'leonpaulukraine.com'
-    USA: 'leonpaulusa.com'
+export type CountryCodeDomainCurrencyMap = {
+    AUS: {
+        domain: 'leonpaulaustralia.com'
+        currency: 'AUD'
+    }
+    CAN: {
+        domain: 'leonpaulcanada.com'
+        currency: 'CAD'
+    }
+    DEU: {
+        domain: 'leonpaulgermany.com'
+        currency: 'EUR'
+    }
+    FRA: {
+        domain: 'leonpaulfrance.com'
+        currency: 'EUR'
+    }
+    ITA: {
+        domain: 'leonpaulitaly.com'
+        currency: 'EUR'
+    }
+    GBR: {
+        domain: 'leonpaul.com'
+        currency: 'GBP'
+    }
+    UKR: {
+        domain: 'leonpaulukraine.com'
+        currency: 'UAH'
+    }
+    USA: {
+        domain: 'leonpaulusa.com'
+        currency: 'USD'
+    }
 }
 
 /**
@@ -24,7 +48,7 @@ export type CountryCodeDomainMap = {
  * - `leonpaulukraine.com` - Ukraine
  * - `leonpaulusa.com` - United States
  */
-export type CountryDomain = CountryCodeDomainMap[CountryCode]
+export type CountryDomain = CountryCodeDomainCurrencyMap[CountryCode]['domain']
 
 /**
  * Represents all the possible Leon Paul regional sites and their corresponding ISO country codes.
@@ -38,7 +62,7 @@ export type CountryDomain = CountryCodeDomainMap[CountryCode]
  * - `UKR` (Ukraine) - leonpaulukraine.com
  * - `USA` (United States) - leonpaulusa.com
  */
-export type CountryCode = keyof CountryCodeDomainMap
+export type CountryCode = keyof CountryCodeDomainCurrencyMap
 
 /**
  * Represents all the possible currencies found on Leon Paul's websites.
@@ -50,4 +74,4 @@ export type CountryCode = keyof CountryCodeDomainMap
  * - `UAH` (Ukrainian Hryvnia) - Used on leonpaulukraine.com
  * - `USD` (US Dollar) - Used on leonpaulusa.com
  */
-export type CurrencyCode = 'AUD' | 'CAD' | 'EUR' | 'GBP' | 'UAH' | 'USD'
+export type CurrencyCode = CountryCodeDomainCurrencyMap[CountryCode]['currency']
