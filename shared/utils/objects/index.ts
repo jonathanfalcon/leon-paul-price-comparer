@@ -1,1 +1,1 @@
-export * from './countryCodeDomainCurrencyMap'
+export * from './countryCodeDomainCurrencyArray'
