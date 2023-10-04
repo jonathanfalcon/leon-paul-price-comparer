@@ -1,36 +1,49 @@
-import { CountryCodeDomainCurrencyMap } from '@leon-paul-price-comparer/types'
+import { CountryCodeDomainCurrencyArray } from '@leon-paul-price-comparer/types'
 
-export const countryCodeDomainCurrencyMap: CountryCodeDomainCurrencyMap = {
-    AUS: {
+/**
+ * Array mapping relation between ISO country code, Leon Paul domain, and ISO currency code.
+ *
+ * @see CountryCodeDomainCurrencyArray
+ */
+export const countryCodeDomainCurrencyArray: CountryCodeDomainCurrencyArray = [
+    {
+        country: 'AUS',
         domain: 'leonpaulaustralia.com',
         currency: 'AUD',
     },
-    CAN: {
+    {
+        country: 'CAN',
         domain: 'leonpaulcanada.com',
         currency: 'CAD',
     },
-    DEU: {
+    {
+        country: 'DEU',
         domain: 'leonpaulgermany.com',
         currency: 'EUR',
     },
-    FRA: {
+    {
+        country: 'FRA',
         domain: 'leonpaulfrance.com',
         currency: 'EUR',
     },
-    ITA: {
+    {
+        country: 'ITA',
         domain: 'leonpaulitaly.com',
         currency: 'EUR',
     },
-    GBR: {
+    {
+        country: 'GBR',
         domain: 'leonpaul.com',
         currency: 'GBP',
     },
-    UKR: {
+    {
+        country: 'UKR',
         domain: 'leonpaulukraine.com',
         currency: 'UAH',
     },
-    USA: {
+    {
+        country: 'USA',
         domain: 'leonpaulusa.com',
         currency: 'USD',
     },
-}
+]
