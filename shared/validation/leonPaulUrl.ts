@@ -104,27 +104,14 @@ const clean = (url: string): string => {
  * 'GBR'
  */
 const region = (url: string): CountryCode => {
-    const { domain } = extractUrlComponents(url) as { domain: CountryDomain }
+    const { domain } = extractUrlComponents(url)
 
-    switch (domain) {
-        case 'leonpaulaustralia.com':
-            return 'AUS'
-        case 'leonpaulcanada.com':
-            return 'CAN'
-        case 'leonpaulgermany.com':
-            return 'DEU'
-        case 'leonpaulfrance.com':
-            return 'FRA'
-        case 'leonpaulitaly.com':
-            return 'ITA'
-        case 'leonpaul.com':
-            return 'GBR'
-        case 'leonpaulukraine.com':
-            return 'UKR'
-        case 'leonpaulusa.com':
-            return 'USA'
-        default:
-            throw new Error('Given URL is not a valid Leon Paul URL.')
+    const region = countryCodeDomainCurrencyArray.find(country => country.domain === domain)?.country
+
+    if (region) {
+        return region
+    } else {
+        throw new Error('Given URL is not a valid Leon Paul URL.')
     }
 }
 
