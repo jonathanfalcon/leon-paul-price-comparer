@@ -1,4 +1,4 @@
-import { CountryCodeDomainCurrencyArray } from '@leon-paul-price-comparer/types'
+import { CountryCodeDomainCurrencyArray } from '@leon-paul-price-comparer/types/Common'
 
 /**
  * Array mapping relation between ISO country code, Leon Paul domain, and ISO currency code.
