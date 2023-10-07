@@ -9,7 +9,7 @@ import { CountryCode } from '../../Common'
  */
 type BaseContext = {
     url: string
-    pageType: 'product' | 'searchCatalog'
+    pageType: 'product' | 'catalogSearch'
     country: CountryCode
 }
 
@@ -25,10 +25,10 @@ type HttpErrorContext = {
 export type WebScrapingErrorName =
     | 'NetworkError'
     | 'TimeoutError'
-    | 'HttpError'
     | 'MissingDataError'
+    | 'HttpError'
 
 export type WebScrapingErrorDetails = {
     [key in WebScrapingErrorName]: BaseContext &
-        (key extends 'HttpError' ? HttpErrorContext : Record<string, never>)
+        (key extends 'HttpError' ? HttpErrorContext : NonNullable<unknown>)
 }
