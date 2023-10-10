@@ -1,5 +1,18 @@
+import { ProductTypeEnum } from '../../Common'
 import { z } from 'zod'
-import { ProductSchema } from '@leon-paul-price-comparer/validation/LeonPaulPageData'
+
+/**
+ * Zod schema for product object in `window.dataLayer`.
+ *
+ * @see ProductType
+ */
+export const ProductSchema = z.object({
+    id: z.string(),
+    sku: z.string(),
+    name: z.string(),
+    product_type: ProductTypeEnum,
+    image_url: z.string(),
+})
 
 /**
  * Represents the structure of product object in `window.dataLayer`.
