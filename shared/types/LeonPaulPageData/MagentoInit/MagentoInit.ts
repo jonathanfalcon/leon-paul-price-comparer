@@ -1,6 +1,5 @@
-import { SimpleProduct } from './SimpleProduct'
-import { ConfigurableProduct } from './ConfigurableProduct'
-import { BundleProduct } from './BundleProduct'
+import { z } from 'zod'
+import { MagentoInitSchema } from '@leon-paul-price-comparer/validation/LeonPaulPageData'
 
 /**
  * Represents all the possible structures of magento-init.
@@ -9,4 +8,4 @@ import { BundleProduct } from './BundleProduct'
  * @see ConfigurableProduct
  * @see BundleProduct
  */
-export type MagentoInit = SimpleProduct | ConfigurableProduct | BundleProduct
+export type MagentoInit = z.infer<typeof MagentoInitSchema>
