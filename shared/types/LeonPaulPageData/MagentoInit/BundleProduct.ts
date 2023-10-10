@@ -1,4 +1,10 @@
-import { Prices } from '../Common/Prices'
+import { z } from 'zod'
+import {
+    SelectionSchema,
+    OptionSchema,
+    BundleConfigSchema,
+    BundleProductSchema,
+} from '@leon-paul-price-comparer/validation/LeonPaulPageData'
 
 /**
  * Represents a selection inside in an option category, .e.g., Mag-Tec Zer0 Pistol Grip in the grips option category.
@@ -7,11 +13,7 @@ import { Prices } from '../Common/Prices'
  * @property name - The name for a given selection.
  * @property prices - A collection of price properties for a given selection.
  */
-export type Selection = {
-    optionId: string
-    name: string
-    prices: Prices
-}
+export type Selection = z.infer<typeof SelectionSchema>
 
 /**
  * Represents an option category inside a product bundle, .e.g, grip, blade, or guard for the "Custom Foil Creator" product.
@@ -21,10 +23,7 @@ export type Selection = {
  *
  * @see Selection
  */
-export type Option = {
-    title: string
-    selections: Record<string, Selection>
-}
+export type Option = z.infer<typeof OptionSchema>
 
 /**
  * Represents the properties of a bundle product's JSON.
@@ -33,19 +32,11 @@ export type Option = {
  *
  * @see Option
  */
-export type BundleConfig = {
-    options: Record<string, Option>
-}
+export type BundleConfig = z.infer<typeof BundleConfigSchema>
 
 /**
  * Represents the structure of magento-init for a product where `"product_type": "bundle"`.
  *
  * @see BundleConfig
  */
-export type BundleProduct = {
-    '#product_addtocart_form': {
-        priceBundle: {
-            optionConfig: BundleConfig
-        }
-    }
-}
+export type BundleProduct = z.infer<typeof BundleProductSchema>
