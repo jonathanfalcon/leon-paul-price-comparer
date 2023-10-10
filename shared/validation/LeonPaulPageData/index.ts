@@ -1,5 +1,5 @@
 /**
- * Exports all Leon Paul Page Data types used in the Leon Paul Price Comparer project.
+ * Exports all Leon Paul Page Data schemas used in the Leon Paul Price Comparer project.
  */
 
 // Common
