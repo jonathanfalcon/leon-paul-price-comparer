@@ -1,19 +1,17 @@
+import { z } from 'zod'
+import {
+    ItemPriceInfoSchema,
+    SimpleConfigSchema,
+    SimpleProductSchema,
+} from '@leon-paul-price-comparer/validation/LeonPaulPageData'
+
 /**
  * Represents the pricing information for a given product.
  *
  * @property price_info.final_price - The price after VAT.
  * @property price_info.extension_attributes.tax_adjustments.final_price - The price before VAT.
  */
-export type ItemPriceInfo = {
-    price_info: {
-        final_price: number
-        extension_attributes: {
-            tax_adjustments: {
-                final_price: number
-            }
-        }
-    }
-}
+export type ItemPriceInfo = z.infer<typeof ItemPriceInfoSchema>
 
 /**
  * Represents the properties of a simple product's JSON.
@@ -22,19 +20,11 @@ export type ItemPriceInfo = {
  *
  * @see ItemPriceInfo
  */
-export type SimpleConfig = {
-    items: Record<string, ItemPriceInfo>
-}
+export type SimpleConfig = z.infer<typeof SimpleConfigSchema>
 
 /**
  * Represents the structure of magento-init for a product where `"product_type": "simple"`.
  *
  * @see SimpleConfig
  */
-export type SimpleProduct = {
-    '*': {
-        'Magento_Catalog/js/product/view/provider': {
-            data: SimpleConfig
-        }
-    }
-}
+export type SimpleProduct = z.infer<typeof SimpleProductSchema>
