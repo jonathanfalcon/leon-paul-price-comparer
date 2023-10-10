@@ -4,5 +4,8 @@
   "description": "Collection of types used in leon-paul-price-comparer",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "zod": "^3.22.4"
+  }
 }
