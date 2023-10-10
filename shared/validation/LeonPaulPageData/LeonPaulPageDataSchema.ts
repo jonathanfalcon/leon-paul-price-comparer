@@ -1,5 +1,16 @@
+import { ProductSchema } from './Product/ProductSchema'
+import { MagentoInitSchema } from './MagentoInit/MagentoInitSchema'
 import { z } from 'zod'
-import { LeonPaulPageDataSchema } from '@leon-paul-price-comparer/validation/LeonPaulPageData'
+
+/**
+ * Zod schema for data collected from scraping a Leon Paul product page.
+ *
+ * @see LeonPaulPageData
+ */
+export const LeonPaulPageDataSchema = z.object({
+    product: ProductSchema,
+    magentoInit: MagentoInitSchema,
+})
 
 /**
  * Represents the data collected from scraping a Leon Paul product page.
