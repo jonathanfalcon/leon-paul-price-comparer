@@ -86,8 +86,14 @@ const extractUrlComponents = (urlString: string): UrlComponents => {
  */
 const validate = (url: string): boolean => {
     const validDomains = countryCodeDomainCurrencyArray.map(country => country.domain)
+
     const { domain } = extractUrlComponents(url)
-    return validDomains.includes(domain as CountryDomain)
+
+    if (domain) {
+        return validDomains.includes(domain as CountryDomain)
+    }
+
+    return false
 }
 
 /**
