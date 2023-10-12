@@ -49,24 +49,32 @@ const extractUrlComponents = (urlString: string): UrlComponents => {
         const url = new URI(urlDirty.readable())
         url.normalize()
 
+        const protocol = url.protocol().length > 0 ? url.protocol() : null
+        const subdomain = url.subdomain().length > 0 ? url.subdomain() : null
+        const domain = url.domain().length > 0 ? url.domain() : null
+        const path = url.path().length > 0 ? url.path() : null
+        const extension = url.suffix().length > 0 ? url.suffix() : null
+        const query = url.query().length > 0 ? url.query() : null
+        const anchor = url.hash().length > 0 ? url.hash() : null
+
         return {
-            protocol: url.protocol() || '',
-            subdomain: url.subdomain() || '',
-            domain: url.domain() || '',
-            path: url.path() || '',
-            extension: url.suffix() || '',
-            query: url.query() || '',
-            anchor: url.hash() || '',
+            protocol,
+            subdomain,
+            domain,
+            path,
+            extension,
+            query,
+            anchor,
         }
     } catch (error) {
         return {
-            protocol: '',
-            subdomain: '',
-            domain: '',
-            path: '',
-            extension: '',
-            query: '',
-            anchor: '',
+            protocol: null,
+            subdomain: null,
+            domain: null,
+            path: null,
+            extension: null,
+            query: null,
+            anchor: null,
         }
     }
 }
