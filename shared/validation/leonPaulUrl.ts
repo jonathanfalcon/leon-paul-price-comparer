@@ -120,7 +120,8 @@ const clean = (url: string): string => {
 const region = (url: string): CountryCode => {
     const { domain } = extractUrlComponents(url)
 
-    const region = countryCodeDomainCurrencyArray.find(country => country.domain === domain)?.country
+    const region = countryCodeDomainCurrencyArray.find(country => country.domain === domain)
+        ?.country
 
     if (region) {
         return region
