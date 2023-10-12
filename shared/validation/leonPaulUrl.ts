@@ -103,7 +103,7 @@ const validate = (url: string): boolean => {
  */
 const clean = (url: string): string => {
     const { domain, path } = extractUrlComponents(url)
-    return url ? `https://www.${domain}${path}` : ''
+    return `https://www.${domain}${path}`
 }
 
 /**
