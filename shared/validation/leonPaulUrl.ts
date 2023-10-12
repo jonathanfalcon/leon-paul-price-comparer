@@ -13,13 +13,13 @@ import { countryCodeDomainCurrencyArray } from '@leon-paul-price-comparer/utils/
  * @property anchor - The URL anchor (e.g., fragment identifier, `#section`).
  */
 type UrlComponents = {
-    protocol: string
-    subdomain: string
-    domain: string
-    path: string
-    extension: string
-    query: string
-    anchor: string
+    protocol: string | null
+    subdomain: string | null
+    domain: string | null
+    path: string | null
+    extension: string | null
+    query: string | null
+    anchor: string | null
 }
 
 /**
