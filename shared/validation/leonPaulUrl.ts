@@ -25,7 +25,7 @@ type UrlComponents = {
 /**
  * Dissects a given URL into its main components. The URL is standardized it in the process by forcing protocol to `https` and suffix to `html`.
  * @param urlString A URL in string format.
- * @returns Returns an object with the protocol, subdomain, domain, path, extension, query params, and anchor tags. An absent component is represented by an empty string. An invalid url will return an object where all components are an empty string.
+ * @returns Returns an object with the protocol, subdomain, domain, path, extension, query params, and anchor tags. An absent component is represented by a null value. An invalid url will return an object where all components are null values.
  *
  * @example
  * const url = 'http://www.leonpaul.com/project-zero-foil?utm_medium=email#specs'
