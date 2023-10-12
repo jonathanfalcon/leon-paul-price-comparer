@@ -53,18 +53,18 @@ export const countryCodeDomainCurrencyArray: CountryCodeDomainCurrencyArray = [
  *
  * @see CountryCode
  */
-export const validCountryCodes = countryCodeDomainCurrencyArray.map(country => country.country)
+export const validCountryCodes: string[] = countryCodeDomainCurrencyArray.map(country => country.country)
 
 /**
  * Array of all valid Leon Paul domains.
  *
  * @see CountryDomain
  */
-export const validCountryDomains = countryCodeDomainCurrencyArray.map(country => country.domain)
+export const validCountryDomains: string[] = countryCodeDomainCurrencyArray.map(country => country.domain)
 
 /**
  * Array of all valid ISO currency codes.
  *
  * @see CurrencyCode
  */
-export const validCurrencyCodes = countryCodeDomainCurrencyArray.map(country => country.currency)
+export const validCurrencyCodes: string[] = countryCodeDomainCurrencyArray.map(country => country.currency)
