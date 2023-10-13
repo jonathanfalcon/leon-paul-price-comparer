@@ -98,18 +98,25 @@ const extractUrlComponents = (urlString: string): UrlComponents => {
 }
 
 /**
- * Validates that a given URL is a Leon Paul URL.
+ * Validates that a given URL contains a valid Leon Paul domain.
  * @param url A URL in string format.
- * @returns Returns `true` if the url domain matched a Leon Paul domain; `false` if otherwise.
+ * @returns Returns `true` if the URL domain matched a Leon Paul domain; `false` if otherwise.
  */
-const validate = (url: string): boolean => {
+const validateDomain = (url: string): boolean => {
     const { domain } = extractUrlComponents(url)
 
-    if (domain) {
-        return validCountryDomains.includes(domain)
-    }
+    return !!(domain && validCountryDomains.includes(domain))
+}
 
-    return false
+/**
+ * Validates that a given URL has a path that conforms to the structure of a product page path.
+ * @param url A URL in string format.
+ * @returns Returns `true` if the URL path matched the structure of a product page path; `false` if otherwise.
+ */
+const validatePath = (url: string): boolean => {
+    const { path } = extractUrlComponents(url)
+
+    return !!(path && productPathRegex.test(path))
 }
 
 /**
