@@ -174,14 +174,17 @@ const pageType = (url: string): PageType => {
  * @property clean - Cleans and formats a Leon Paul URL, preserving only the domain and path.
  * @property validate - Validates that a given URL is a Leon Paul URL.
  * @property region - Identifies which regional site a Leon Paul URL belongs to.
+ * @property pageType - Identifies which page type a Leon Paul URL is
  * @see clean
  * @see validate
  * @see country
+ * @see pageType
  */
 const leonPaulUrl = {
     clean,
     validate,
     region,
+    pageType
 }
 
 export default leonPaulUrl
