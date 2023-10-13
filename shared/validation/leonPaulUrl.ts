@@ -36,7 +36,7 @@ type UrlComponents = {
 }
 
 /**
- * Dissects a given URL into its main components. The URL is standardized it in the process by forcing protocol to `https` and suffix to `html`.
+ * Dissects a given URL into its main components. The URL is standardized it in the process by forcing protocol to `https` and removing trailing slashes.
  * @param urlString A URL in string format.
  * @returns Returns an object with the protocol, subdomain, domain, path, extension, query params, and anchor tags. An absent component is represented by a null value. An invalid url will return an object where all components are null values.
  *
@@ -57,7 +57,12 @@ type UrlComponents = {
  */
 const extractUrlComponents = (urlString: string): UrlComponents => {
     try {
-        const urlDirty = new URI(urlString).protocol('https').suffix('html')
+        const urlDirty = new URI(urlString).protocol('https')
+
+        if (urlDirty.path().endsWith('/')) {
+            const path = urlDirty.path().slice(0, -1)
+            urlDirty.path(path)
+        }
 
         const url = new URI(urlDirty.readable())
         url.normalize()
