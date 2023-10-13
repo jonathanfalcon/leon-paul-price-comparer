@@ -158,12 +158,12 @@ const region = (url: string): CountryCode => {
  */
 const pageType = (url: string): PageType => {
     try {
-        const { path } = extractUrlComponents(url)
+        const { path, extension } = extractUrlComponents(url)
 
         if (path) {
             if (path.includes('catalogsearch/result')) {
                 return 'catalogSearch'
-            } else if (productPathRegex.test(path)) {
+            } else if (productPathRegex.test(extension === 'html' ? path : `${path}.html`)) {
                 return 'product'
             }
         }
