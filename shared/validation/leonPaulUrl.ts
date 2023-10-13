@@ -6,6 +6,16 @@ import {
 } from '@leon-paul-price-comparer/utils/objects'
 
 /**
+ * A regular expression that matches product page paths. It ensures that a URL path must:
+ *
+ * 1. Be in the root directory: `^\/`
+ * 2. Contain zero or more groups, separated only a single hyphen, of at least one or more valid URL characters: `([A-Za-z0-9]+-)*`
+ * 3. Contain one or more valid URL characters in addition to the prior condition: `[A-Za-z0-9]+`
+ * 4. End with `.html`: `\.html$`
+ */
+const productPathRegex = /^\/([A-Za-z0-9]+-)*[A-Za-z0-9]+\.html$/
+
+/**
  * Represents the components of a URL.
  * @property protocol - The URL protocol (e.g., `http` or `https`).
  * @property subdomain - The URL subdomain (e.g., `app` for `app.example.com`).
