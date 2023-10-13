@@ -192,7 +192,7 @@ const pageType = (url: string): PageType => {
  * @see country
  * @see pageType
  */
-const leonPaulUrl = {
+export const leonPaulUrl = {
     clean,
     validate: {
         domain: validateDomain,
@@ -201,5 +201,3 @@ const leonPaulUrl = {
     region,
     pageType,
 }
-
-export default leonPaulUrl
