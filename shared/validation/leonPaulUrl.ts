@@ -142,6 +142,34 @@ const region = (url: string): CountryCode => {
 }
 
 /**
+ * Identifies which page type a Leon Paul URL is.
+ * @param url A Leon Paul URL in string format.
+ * @returns Returns a string containing the page type. Returns `other` if page type does not match `product` or `catalogSearch` or if an error is thrown.
+ * @example
+ * console.log(pageType('https://www.leonpaul.com/mens-apex-fie-jacket.html'))
+ *
+ * // This will be logged the console:
+ * 'product'
+ */
+const pageType = (url: string): PageType => {
+    try {
+        const { path } = extractUrlComponents(url)
+
+        if (path) {
+            if (path.includes('catalogsearch/result/')) {
+                return 'catalogSearch'
+            } else if (productPathRegex.test(path)) {
+                return 'product'
+            }
+        }
+
+        return 'other'
+    } catch (error) {
+        return 'other'
+    }
+}
+
+/**
  * An object containing functions for working with Leon Paul URLs.
  * @property clean - Cleans and formats a Leon Paul URL, preserving only the domain and path.
  * @property validate - Validates that a given URL is a Leon Paul URL.
