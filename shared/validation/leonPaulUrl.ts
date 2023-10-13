@@ -1,5 +1,5 @@
 import URI from 'urijs'
-import { CountryCode } from '@leon-paul-price-comparer/types/Common'
+import { CountryCode, PageType } from '@leon-paul-price-comparer/types/Common'
 import {
     countryCodeDomainCurrencyArray,
     validCountryDomains,
