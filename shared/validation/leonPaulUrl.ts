@@ -113,13 +113,13 @@ const validate = (url: string): boolean => {
 }
 
 /**
- * Cleans and formats a Leon Paul URL, preserving only the domain and path.
+ * Cleans and formats a Leon Paul URL, preserving only the domain and path and adding `.html` to the end if needed.
  * @param url A URL in string format.
  * @returns Returns either the cleaned and formatted URL or an empty string (a falsy value).
  */
 const clean = (url: string): string => {
-    const { domain, path } = extractUrlComponents(url)
-    return `https://www.${domain}${path}`
+    const { domain, path, extension } = extractUrlComponents(url)
+    return `https://www.${domain}${extension === 'html' ? path : `${path}.html`}`
 }
 
 /**
