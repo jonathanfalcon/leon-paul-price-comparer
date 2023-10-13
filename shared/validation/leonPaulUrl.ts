@@ -161,7 +161,7 @@ const pageType = (url: string): PageType => {
         const { path } = extractUrlComponents(url)
 
         if (path) {
-            if (path.includes('catalogsearch/result/')) {
+            if (path.includes('catalogsearch/result')) {
                 return 'catalogSearch'
             } else if (productPathRegex.test(path)) {
                 return 'product'
