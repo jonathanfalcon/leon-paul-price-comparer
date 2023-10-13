@@ -194,9 +194,12 @@ const pageType = (url: string): PageType => {
  */
 const leonPaulUrl = {
     clean,
-    validate,
+    validate: {
+        domain: validateDomain,
+        path: validatePath,
+    },
     region,
-    pageType
+    pageType,
 }
 
 export default leonPaulUrl
