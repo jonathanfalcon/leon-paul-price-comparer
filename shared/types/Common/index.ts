@@ -5,5 +5,8 @@
 // Product Type
 export * from './ProductType'
 
+// Page Type
+export * from './PageType'
+
 // Region Codes
 export * from './RegionCodes'
