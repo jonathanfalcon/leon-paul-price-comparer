@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { validCountryCodes } from '@leon-paul-price-comparer/utils/objects'
-import leonPaulUrl from '../../leonPaulUrl'
+import { leonPaulUrl, extractUrlComponents } from '../../leonPaulUrl'
 
 /**
  * Zod schema for Leon Paul URL input. Includes validation via `leonPaulUrl.validate`.
