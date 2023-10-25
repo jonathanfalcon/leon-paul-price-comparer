@@ -3,7 +3,7 @@ import { validCountryCodes } from '@leon-paul-price-comparer/utils/objects'
 import { leonPaulUrl, extractUrlComponents } from '../../leonPaulUrl'
 
 /**
- * Zod schema for Leon Paul URL input. Includes validation via `leonPaulUrl.validate`.
+ * Zod schema for Leon Paul URL input. It uses custom URL validation via `extractUrlComponents`. If this passes, the URL is cleaned and both its domain and path are validated.
  */
 export const UrlInputSchema = z.coerce
     .string()
