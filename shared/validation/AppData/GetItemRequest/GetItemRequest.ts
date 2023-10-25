@@ -7,7 +7,35 @@ import { leonPaulUrl, extractUrlComponents } from '../../leonPaulUrl'
  */
 export const UrlInputSchema = z.coerce
     .string()
-    .refine(url => leonPaulUrl.validate(url), { message: 'URL is not a valid Leon Paul URL.' })
+    .superRefine((value, ctx) => {
+        const { domain, path } = extractUrlComponents(value)
+
+        if (!domain || !path) {
+            ctx.addIssue({
+                code: z.ZodIssueCode.invalid_string,
+                validation: 'url',
+                fatal: true,
+            })
+
+            return z.NEVER
+        }
+    })
+    .transform((value, ctx) => {
+        const url = leonPaulUrl.clean(value)
+
+        const validDomain = leonPaulUrl.validate.domain(url)
+        const validPath = leonPaulUrl.validate.path(url)
+
+        if (!validDomain || !validPath) {
+            ctx.addIssue({
+                code: z.ZodIssueCode.custom,
+                params: {
+                    validDomain,
+                    validPath,
+                },
+            })
+        }
+    })
 
 /**
  * Zod schema for Leon Paul URL input. Includes validation by checking if region is in `validCountryCodes` array.
