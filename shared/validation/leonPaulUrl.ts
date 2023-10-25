@@ -55,7 +55,7 @@ type UrlComponents = {
  *    anchor: '#specs'
  * }
  */
-const extractUrlComponents = (urlString: string): UrlComponents => {
+export const extractUrlComponents = (urlString: string): UrlComponents => {
     try {
         const urlDirty = new URI(urlString).protocol('https')
 
