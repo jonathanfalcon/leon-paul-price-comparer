@@ -7,7 +7,7 @@ import { CurrencyCode } from '../..'
  *
  *  @see CurrencyCode
  */
-type ExchangeRateMap = {
+export type ExchangeRateMap = {
     [base in CurrencyCode]: {
         [target in CurrencyCode]: base extends target ? 1 : number
     }
