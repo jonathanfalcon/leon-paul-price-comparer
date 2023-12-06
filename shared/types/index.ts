@@ -23,6 +23,9 @@ export * from './LeonPaulPageData/Product/Product'
 // Web Scraping Types - Common
 export * from './LeonPaulPageData/Common/Prices'
 
+// Currency API Types
+export * from './CurrencyApi/CurrencyApiResponse'
+
 // Common Types (used in multiple workspaces or lack a distinct grouping)
 export * from './Common/RegionCodes'
 export * from './Common/ProductType'
