@@ -1,1 +1,1 @@
-export * from './webScraping/webScraping'
+export * from './webFetch/webFetch'

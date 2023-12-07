@@ -3,4 +3,4 @@
  */
 
 // Web Scraping
-export * from './WebScrapingError/WebScrapingError'
+export * from './WebFetchError/WebFetchError'
