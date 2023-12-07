@@ -3,7 +3,6 @@ import { ExchangeRateError } from '../../exceptions'
 
 const { CURRENCY_API_KEY } = process.env
 
-const fetchExchangeRate = async () => {
 /**
  * Fetches the exchange rate object from the currency api.
  *
@@ -47,6 +46,17 @@ const fetchIndividualExchangeRate = async <Currency extends CurrencyCode[]>(
         }
     }
 }
+
+/**
+ * Concurrently fetches all necessary exchange rates from the currency api.
+ *
+ * @returns A promise that resolves to an `ExchangeRateMap` object.
+ *
+ * @see ExchangeRateMap
+ *
+ * @throws {ExchangeRateError} If any errors occur during or after fetching of exchange rates.
+ */
+export const fetchExchangeRate = async (): Promise<ExchangeRateMap> => {
     const baseUrl = 'https://api.currencyapi.com/v3/latest?apikey='
 
     const currencyPairs = {
@@ -67,13 +77,66 @@ const fetchIndividualExchangeRate = async <Currency extends CurrencyCode[]>(
     })
 
     try {
-        const responses = await Promise.all(urls.map(url => fetch(url)))
-        const data = await Promise.all(responses.map(response => response.json()))
+        const [response_AUD, response_CAD, response_EUR, response_GBP, response_UAH] =
+            await Promise.all([
+                fetchIndividualExchangeRate<['CAD', 'EUR', 'GBP', 'UAH', 'USD']>(urls[0], 'AUD'),
+                fetchIndividualExchangeRate<['EUR', 'GBP', 'UAH', 'USD']>(urls[1], 'CAD'),
+                fetchIndividualExchangeRate<['GBP', 'UAH', 'USD']>(urls[2], 'EUR'),
+                fetchIndividualExchangeRate<['UAH', 'USD']>(urls[3], 'GBP'),
+                fetchIndividualExchangeRate<['USD']>(urls[4], 'UAH'),
+            ])
 
-        const [response_AUD, response_CAD, response_EUR, response_GBP, response_UAH, response_USD] =
-            data
-
-
-
-    } catch (error) {}
+        return {
+            AUD: {
+                AUD: 1,
+                CAD: response_AUD.data.CAD.value,
+                EUR: response_AUD.data.EUR.value,
+                GBP: response_AUD.data.GBP.value,
+                UAH: response_AUD.data.UAH.value,
+                USD: response_AUD.data.USD.value,
+            },
+            CAD: {
+                AUD: 1 / response_AUD.data.CAD.value,
+                CAD: 1,
+                EUR: response_CAD.data.EUR.value,
+                GBP: response_CAD.data.GBP.value,
+                UAH: response_CAD.data.UAH.value,
+                USD: response_CAD.data.USD.value,
+            },
+            EUR: {
+                AUD: 1 / response_AUD.data.EUR.value,
+                CAD: 1 / response_CAD.data.EUR.value,
+                EUR: 1,
+                GBP: response_EUR.data.GBP.value,
+                UAH: response_EUR.data.UAH.value,
+                USD: response_EUR.data.USD.value,
+            },
+            GBP: {
+                AUD: 1 / response_AUD.data.GBP.value,
+                CAD: 1 / response_CAD.data.GBP.value,
+                EUR: 1 / response_EUR.data.GBP.value,
+                GBP: 1,
+                UAH: response_GBP.data.UAH.value,
+                USD: response_GBP.data.USD.value,
+            },
+            UAH: {
+                AUD: 1 / response_AUD.data.UAH.value,
+                CAD: 1 / response_CAD.data.UAH.value,
+                EUR: 1 / response_EUR.data.UAH.value,
+                GBP: 1 / response_GBP.data.UAH.value,
+                UAH: 1,
+                USD: response_UAH.data.USD.value,
+            },
+            USD: {
+                AUD: 1 / response_AUD.data.USD.value,
+                CAD: 1 / response_CAD.data.USD.value,
+                EUR: 1 / response_EUR.data.USD.value,
+                GBP: 1 / response_GBP.data.USD.value,
+                UAH: 1 / response_UAH.data.USD.value,
+                USD: 1,
+            },
+        }
+    } catch (error) {
+        throw new ExchangeRateError('MissingDataError', {})
+    }
 }
