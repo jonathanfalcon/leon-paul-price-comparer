@@ -27,7 +27,7 @@ type PublicContext_WebScraping = InputContext_WebScraping & {
  * @property currency - The currency code associated with the error.
  */
 type PublicContext_ExchangeRate = {
-    currency: CurrencyCode
+    currency?: CurrencyCode
 }
 
 /**
