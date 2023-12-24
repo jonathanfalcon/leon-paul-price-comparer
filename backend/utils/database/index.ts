@@ -1,4 +1,5 @@
 import { connect } from 'mongoose'
+import { exchangeRate } from './access/exchangeRate'
 
 const connectDb = async (databaseURL: string) => {
     try {
@@ -12,7 +13,5 @@ const connectDb = async (databaseURL: string) => {
 
 export const database = {
     connect: connectDb,
-    add: 'add',
-    remove: 'remove',
-    update: 'update',
+    exchangeRate,
 }
