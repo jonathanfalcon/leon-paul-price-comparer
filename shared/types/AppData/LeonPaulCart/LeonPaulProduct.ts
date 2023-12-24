@@ -91,11 +91,13 @@ export type CartItemProduct = {
  * @property itemName - The name of a given product.
  * @property url - The URL to that product.
  * @property price - The total price (before and after tax) of a given product.
+ * @property lastFetch - A timestamp indicating when the product data was last fetched and updated. It is generated and stored in Coordinated Universal Time (UTC) as seconds.
  */
 export type LeonPaulSimpleProduct = {
     itemName: string
     url: string
     price: Price
+    lastFetch: number
 }
 
 /**
