@@ -1,5 +1,5 @@
 import { ExchangeRateModel } from '../models/ExchangeRateModel'
-import { fetchExchangeRate } from '../../data/fetchExchangeRate/fetchExchangeRate'
+import { fetchExchangeRate } from '../../data/fetch/fetchExchangeRate/fetchExchangeRate'
 import { ExchangeRate } from '@leon-paul-price-comparer/types'
 import { passedTime } from '@leon-paul-price-comparer/utils/functions/passedTime'
 import { DatabaseError } from '../../exceptions/database/database'

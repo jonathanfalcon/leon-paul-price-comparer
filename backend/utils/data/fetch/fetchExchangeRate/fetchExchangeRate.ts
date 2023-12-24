@@ -1,5 +1,5 @@
 import { CurrencyApiResponse, CurrencyCode, ExchangeRate } from '@leon-paul-price-comparer/types'
-import { ExchangeRateError } from '../../exceptions'
+import { ExchangeRateError } from '../../../exceptions'
 
 const { CURRENCY_API_KEY } = process.env
 

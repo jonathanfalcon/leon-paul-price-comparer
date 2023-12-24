@@ -1,4 +1,4 @@
-import { WebScrapingError } from '../../exceptions'
+import { WebScrapingError } from '../../../exceptions'
 import { CountryCode, MagentoInit } from '@leon-paul-price-comparer/types'
 import { fetchWithTimeout } from './fetchWithTimeout'
 import {

@@ -1,4 +1,4 @@
-import { WebScrapingError } from '../../exceptions'
+import { WebScrapingError } from '../../../exceptions'
 import * as cheerio from 'cheerio'
 
 /**
