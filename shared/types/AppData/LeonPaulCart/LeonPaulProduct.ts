@@ -97,7 +97,6 @@ export type LeonPaulSimpleProduct = {
     itemName: string
     url: string
     price: Price
-    lastFetch: number
 }
 
 /**

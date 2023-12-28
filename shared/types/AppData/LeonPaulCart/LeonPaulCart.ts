@@ -30,6 +30,7 @@ export type LeonPaulCartItemBase<ProductTypeString extends ProductType> = {
     imageUrl: string
     quantity: number
     index: number
+    lastFetch: number
     productType: ProductTypeString
 }
 
