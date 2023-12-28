@@ -11,6 +11,6 @@ type Model = 'ExchangeRate' | 'LeonPaulProduct'
 /**
  * Represents the context object when throwing a DatabaseError.
  */
-export type DatabaseErrorContext = {
-    model: Model
+export type DatabaseErrorContext<T extends Model> = {
+    model: T
 }

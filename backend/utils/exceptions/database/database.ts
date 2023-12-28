@@ -15,9 +15,12 @@ import {
  * @see DatabaseErrorContext
  */
 export class DatabaseError extends Error {
-    public context: DatabaseErrorContext
+    public context: DatabaseErrorContext<'ExchangeRate' | 'LeonPaulProduct'>
 
-    constructor(name: DatabaseErrorName, context: DatabaseErrorContext) {
+    constructor(
+        name: DatabaseErrorName,
+        context: DatabaseErrorContext<'ExchangeRate' | 'LeonPaulProduct'>,
+    ) {
         super(name)
         this.context = context
     }

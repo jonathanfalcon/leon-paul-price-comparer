@@ -46,7 +46,7 @@ type ExchangeRateResponse_Error_ExchangeRateError = { name: 'ExchangeRateError' 
  */
 type ExchangeRateResponse_Error_DatabaseError = { name: 'DatabaseError' } & {
     type: DatabaseErrorName
-    context: DatabaseErrorContext
+    context: DatabaseErrorContext<'ExchangeRate'>
 }
 
 /**
