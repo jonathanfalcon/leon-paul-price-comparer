@@ -4,3 +4,6 @@
 
 // Web Scraping
 export * from './WebFetchError/WebFetchError'
+
+// Database
+export * from './DatabaseError/DatabaseError'
