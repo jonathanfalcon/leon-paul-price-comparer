@@ -33,7 +33,7 @@ const remove = async (): Promise<void> => {
 
 const get = async (): Promise<ExchangeRate> => {
     try {
-        const exchangeRate = await ExchangeRateModel.findOne()
+        const exchangeRate = await ExchangeRateModel.findOne().select('-_id -__v -exchangeRate._id')
 
         if (!exchangeRate) {
             await add()
