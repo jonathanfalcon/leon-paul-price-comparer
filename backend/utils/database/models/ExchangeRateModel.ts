@@ -8,7 +8,7 @@ const exchangeRateSchema = new Schema<ExchangeRate>({
     exchangeRate: {
         type: {
             AUD: {
-                AUD: { type: 1, required: true },
+                AUD: { type: Number, enum: 1, required: true },
                 CAD: { type: Number, required: true },
                 EUR: { type: Number, required: true },
                 GBP: { type: Number, required: true },
@@ -17,7 +17,7 @@ const exchangeRateSchema = new Schema<ExchangeRate>({
             },
             CAD: {
                 AUD: { type: Number, required: true },
-                CAD: { type: 1, required: true },
+                CAD: { type: Number, enum: 1, required: true },
                 EUR: { type: Number, required: true },
                 GBP: { type: Number, required: true },
                 UAH: { type: Number, required: true },
@@ -26,7 +26,7 @@ const exchangeRateSchema = new Schema<ExchangeRate>({
             EUR: {
                 AUD: { type: Number, required: true },
                 CAD: { type: Number, required: true },
-                EUR: { type: 1, required: true },
+                EUR: { type: Number, enum: 1, required: true },
                 GBP: { type: Number, required: true },
                 UAH: { type: Number, required: true },
                 USD: { type: Number, required: true },
@@ -35,7 +35,7 @@ const exchangeRateSchema = new Schema<ExchangeRate>({
                 AUD: { type: Number, required: true },
                 CAD: { type: Number, required: true },
                 EUR: { type: Number, required: true },
-                GBP: { type: 1, required: true },
+                GBP: { type: Number, enum: 1, required: true },
                 UAH: { type: Number, required: true },
                 USD: { type: Number, required: true },
             },
@@ -44,7 +44,7 @@ const exchangeRateSchema = new Schema<ExchangeRate>({
                 CAD: { type: Number, required: true },
                 EUR: { type: Number, required: true },
                 GBP: { type: Number, required: true },
-                UAH: { type: 1, required: true },
+                UAH: { type: Number, enum: 1, required: true },
                 USD: { type: Number, required: true },
             },
             USD: {
@@ -53,7 +53,7 @@ const exchangeRateSchema = new Schema<ExchangeRate>({
                 EUR: { type: Number, required: true },
                 GBP: { type: Number, required: true },
                 UAH: { type: Number, required: true },
-                USD: { type: 1, required: true },
+                USD: { type: Number, enum: 1, required: true },
             },
         },
         required: true,
