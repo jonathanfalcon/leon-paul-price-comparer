@@ -2,6 +2,7 @@ import { WebScrapingError } from '../../../exceptions'
 import { CountryCode, MagentoInit } from '@leon-paul-price-comparer/types'
 import { fetchWithTimeout } from './fetchWithTimeout'
 import {
+    LeonPaulPageData,
     MagentoInitSchema,
     ProductSchema,
 } from '@leon-paul-price-comparer/validation/LeonPaulPageData'
@@ -66,7 +67,7 @@ const _magentoInit = (pageSource: cheerio.Root): MagentoInit => {
  *
  * @throws {WebScrapingError} If there's an error during the web scraping or parsing process.
  */
-const product = async (url: string) => {
+const product = async (url: string): Promise<LeonPaulPageData> => {
     const pageSource = await fetchWithTimeout(url)
 
     try {
@@ -76,6 +77,7 @@ const product = async (url: string) => {
         return {
             product,
             magentoInit,
+            url,
         }
     } catch (error) {
         throw new WebScrapingError('MissingDataError', { url })

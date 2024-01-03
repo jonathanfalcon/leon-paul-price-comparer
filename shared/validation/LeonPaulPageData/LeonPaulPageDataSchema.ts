@@ -10,6 +10,7 @@ import { z } from 'zod'
 export const LeonPaulPageDataSchema = z.object({
     product: ProductSchema,
     magentoInit: MagentoInitSchema,
+    url: z.string(),
 })
 
 /**
