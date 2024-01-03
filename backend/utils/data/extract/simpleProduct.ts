@@ -9,10 +9,10 @@ import {
  * @param pageData The page data to extract from.
  * @param country The country code where page data is from.
  */
-export const simpleProduct = async (
+export const simpleProduct = (
     pageData: LeonPaulPageData,
     country: CountryCode,
-): Promise<LeonPaulCartItemSimple<CountryCode>> => {
+): LeonPaulCartItemSimple<CountryCode> => {
     return {
         sku: pageData.product.sku,
         imageUrl: pageData.product.image_url,
