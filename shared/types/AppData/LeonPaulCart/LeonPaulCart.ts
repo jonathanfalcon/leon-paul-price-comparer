@@ -12,8 +12,11 @@ import {
  * @see CountryCode
  * @see LeonPaulProduct
  */
-export type LeonPaulRegionalProductCollection<Product extends LeonPaulProduct> = {
-    [country in CountryCode]: Product
+export type LeonPaulRegionalProductCollection<
+    Product extends LeonPaulProduct,
+    Countries extends CountryCode | CountryCode[],
+> = {
+    [country in Countries extends CountryCode[] ? Countries[number] : Countries]: Product
 }
 
 /**
@@ -40,8 +43,9 @@ export type LeonPaulCartItemBase<ProductTypeString extends ProductType> = {
  * @see LeonPaulCartItemBase
  * @see LeonPaulRegionalProductCollection
  */
-export type LeonPaulCartItemSimple = LeonPaulCartItemBase<'simple'> &
-    LeonPaulRegionalProductCollection<LeonPaulSimpleProduct>
+export type LeonPaulCartItemSimple<Countries extends CountryCode | CountryCode[]> =
+    LeonPaulCartItemBase<'simple'> &
+        LeonPaulRegionalProductCollection<LeonPaulSimpleProduct, Countries>
 
 /**
  * Represents a configurable item found in the web app's Leon Paul cart, where `productType: 'configurable'`.
@@ -49,8 +53,9 @@ export type LeonPaulCartItemSimple = LeonPaulCartItemBase<'simple'> &
  * @see LeonPaulCartItemBase
  * @see LeonPaulRegionalProductCollection
  */
-export type LeonPaulCartItemConfigurable = LeonPaulCartItemBase<'configurable'> &
-    LeonPaulRegionalProductCollection<LeonPaulConfigurableProduct>
+export type LeonPaulCartItemConfigurable<Countries extends CountryCode | CountryCode[]> =
+    LeonPaulCartItemBase<'configurable'> &
+        LeonPaulRegionalProductCollection<LeonPaulConfigurableProduct, Countries>
 
 /**
  * Represents a bundle item found in the web app's Leon Paul cart, where `productType: 'bundle'`.
@@ -58,8 +63,9 @@ export type LeonPaulCartItemConfigurable = LeonPaulCartItemBase<'configurable'> 
  * @see LeonPaulCartItemBase
  * @see LeonPaulRegionalProductCollection
  */
-export type LeonPaulCartItemBundle = LeonPaulCartItemBase<'bundle'> &
-    LeonPaulRegionalProductCollection<LeonPaulBundleProduct>
+export type LeonPaulCartItemBundle<Countries extends CountryCode | CountryCode[]> =
+    LeonPaulCartItemBase<'bundle'> &
+        LeonPaulRegionalProductCollection<LeonPaulBundleProduct, Countries>
 
 /**
  * Represents all the possible cart items.
@@ -68,14 +74,14 @@ export type LeonPaulCartItemBundle = LeonPaulCartItemBase<'bundle'> &
  * @see LeonPaulCartItemConfigurable
  * @see LeonPaulCartItemBundle
  */
-export type LeonPaulCartItem =
-    | LeonPaulCartItemSimple
-    | LeonPaulCartItemConfigurable
-    | LeonPaulCartItemBundle
+export type LeonPaulCartItem<Countries extends CountryCode | CountryCode[]> =
+    | LeonPaulCartItemSimple<Countries>
+    | LeonPaulCartItemConfigurable<Countries>
+    | LeonPaulCartItemBundle<Countries>
 
 /**
  * Represents a collection of Leon Paul cart items.
  *
  * @see LeonPaulCartItem
  */
-export type LeonPaulCart = LeonPaulCartItem[]
+export type LeonPaulCart = LeonPaulCartItem<CountryCode[]>[]
